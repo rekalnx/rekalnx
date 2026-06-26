@@ -2,44 +2,66 @@
   <defs>
     <!-- Fonts and Styles -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Share+Tech+Mono&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&amp;family=Share+Tech+Mono&amp;display=swap');
       
       .bg {
         fill: #030408;
       }
       
+      /* Subtle Cyber Grid */
       .grid {
-        stroke: #1b162b;
+        stroke: #12162a;
         stroke-width: 0.5;
-        opacity: 0.4;
+        opacity: 0.35;
       }
       
+      .scanlines {
+        fill: url(#scanlinePattern);
+        opacity: 0.12;
+      }
+
+      /* Chromatic Aberration Glitch Animation for Main Title */
       .neon-text-main {
-        font-family: 'Orbitron', 'Courier New', monospace;
+        font-family: 'Orbitron', sans-serif;
         font-weight: 900;
+        font-size: 45px;
+        letter-spacing: 8px;
         fill: #ffffff;
-        font-size: 44px;
-        letter-spacing: 6px;
-        text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff, 0 0 25px #00f0ff;
-        animation: glitch-flicker 4s infinite alternate;
+        text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff;
+        animation: chromatic-glitch 3.5s infinite;
       }
       
+      @keyframes chromatic-glitch {
+        0%, 92%, 94%, 96%, 100% {
+          text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff, 0 0 25px #00f0ff;
+          transform: translate(0, 0) skew(0deg);
+        }
+        93% {
+          text-shadow: 3px -2px 0 #ff0055, -3px 2px 0 #00f0ff, 0 0 15px #bd00ff;
+          transform: translate(-2px, 1px) skew(-2deg);
+        }
+        95% {
+          text-shadow: -3px 2px 0 #ff0055, 3px -2px 0 #00f0ff, 0 0 15px #bd00ff;
+          transform: translate(2px, -1px) skew(2deg);
+        }
+      }
+
       .neon-text-sub {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
+        font-family: 'Share Tech Mono', monospace;
         fill: #8f9bb3;
         font-size: 16px;
-        letter-spacing: 4px;
+        letter-spacing: 5px;
         animation: pulse 2.5s infinite ease-in-out;
       }
 
       .cyan-glow {
         stroke: #00f0ff;
-        filter: drop-shadow(0 0 5px #00f0ff);
+        filter: drop-shadow(0 0 6px #00f0ff);
       }
 
       .purple-glow {
         stroke: #bd00ff;
-        filter: drop-shadow(0 0 5px #bd00ff);
+        filter: drop-shadow(0 0 6px #bd00ff);
       }
 
       .red-glow {
@@ -47,70 +69,42 @@
         filter: drop-shadow(0 0 6px #ff0055);
       }
       
-      @keyframes glitch-flicker {
-        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-          text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff, 0 0 25px #00f0ff, 0 0 40px #00f0ff;
-          opacity: 1;
-          fill: #ffffff;
-        }
-        20%, 24%, 55% {
-          text-shadow: 0 0 2px #ff0055, 0 0 8px #ff0055;
-          opacity: 0.9;
-          fill: #ff0055;
-        }
-      }
-      
       @keyframes pulse {
-        0%, 100% {
-          opacity: 0.7;
-          fill: #8f9bb3;
-          text-shadow: none;
-        }
-        50% {
-          opacity: 1;
-          fill: #00f0ff;
-          text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
-        }
+        0%, 100% { opacity: 0.7; fill: #8f9bb3; text-shadow: none; }
+        50% { opacity: 1; fill: #00f0ff; text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff; }
       }
 
+      /* Moving threat scanline */
       @keyframes scan {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(300px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(300px); }
+        100% { transform: translateY(0px); }
       }
 
       .scanner {
-        stroke: rgba(255, 0, 85, 0.4);
-        stroke-width: 3;
-        filter: drop-shadow(0 0 8px #ff0055);
-        animation: scan 5s ease-in-out infinite;
+        stroke: rgba(255, 0, 85, 0.45);
+        stroke-width: 3.5;
+        filter: drop-shadow(0 0 10px #ff0055);
+        animation: scan 6s ease-in-out infinite;
       }
 
       .border-line {
         stroke-dasharray: 2400;
         stroke-dashoffset: 2400;
-        animation: draw 10s linear infinite;
+        animation: draw 12s linear infinite;
       }
 
       @keyframes draw {
-        to {
-          stroke-dashoffset: 0;
-        }
+        to { stroke-dashoffset: 0; }
+      }
+
+      @keyframes alert-blink {
+        0%, 100% { fill: #ff0055; opacity: 0.15; }
+        50% { fill: #ff0055; opacity: 0.45; }
       }
       
       .alert-box {
-        animation: alert-blink 1.5s infinite steps(2);
-      }
-      
-      @keyframes alert-blink {
-        0%, 100% { fill: #ff0055; opacity: 0.15; }
-        50% { fill: #ff0055; opacity: 0.4; }
+        animation: alert-blink 1.2s infinite steps(2);
       }
 
       .alert-text {
@@ -119,7 +113,7 @@
         fill: #ff0055;
         font-weight: bold;
         letter-spacing: 2px;
-        animation: text-flicker 1.5s infinite alternate;
+        animation: text-flicker 1.2s infinite alternate;
       }
 
       @keyframes text-flicker {
@@ -127,6 +121,11 @@
         50% { opacity: 1; text-shadow: 0 0 6px #ff0055; }
       }
     </style>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlinePattern" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.5" />
+    </pattern>
 
     <!-- Cyber Gradient -->
     <linearGradient id="cyberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -138,72 +137,59 @@
 
   <!-- Background -->
   <rect width="900" height="300" class="bg" />
-
-  <!-- Grid Layout -->
-  <g>
-    <!-- Vertical Grid Lines -->
-    <line x1="50" y1="0" x2="50" y2="300" class="grid" />
-    <line x1="100" y1="0" x2="100" y2="300" class="grid" />
-    <line x1="150" y1="0" x2="150" y2="300" class="grid" />
-    <line x1="200" y1="0" x2="200" y2="300" class="grid" />
-    <line x1="250" y1="0" x2="250" y2="300" class="grid" />
-    <line x1="300" y1="0" x2="300" y2="300" class="grid" />
-    <line x1="350" y1="0" x2="350" y2="300" class="grid" />
-    <line x1="400" y1="0" x2="400" y2="300" class="grid" />
-    <line x1="450" y1="0" x2="450" y2="300" class="grid" />
-    <line x1="500" y1="0" x2="500" y2="300" class="grid" />
-    <line x1="550" y1="0" x2="550" y2="300" class="grid" />
-    <line x1="600" y1="0" x2="600" y2="300" class="grid" />
-    <line x1="650" y1="0" x2="650" y2="300" class="grid" />
-    <line x1="700" y1="0" x2="700" y2="300" class="grid" />
-    <line x1="750" y1="0" x2="750" y2="300" class="grid" />
-    <line x1="800" y1="0" x2="800" y2="300" class="grid" />
-    <line x1="850" y1="0" x2="850" y2="300" class="grid" />
-
-    <!-- Horizontal Grid Lines -->
-    <line x1="0" y1="50" x2="900" y2="50" class="grid" />
-    <line x1="0" y1="100" x2="900" y2="100" class="grid" />
-    <line x1="0" y1="150" x2="900" y2="150" class="grid" />
-    <line x1="0" y1="200" x2="900" y2="200" class="grid" />
-    <line x1="0" y1="250" x2="900" y2="250" class="grid" />
+  
+  <!-- Diagonal Tech grid lines -->
+  <g class="grid">
+    <!-- Vertical and Horizontal -->
+    <path d="M 0,50 L 900,50 M 0,100 L 900,100 M 0,150 L 900,150 M 0,200 L 900,200 M 0,250 L 900,250 
+             M 100,0 L 100,300 M 200,0 L 200,300 M 300,0 L 300,300 M 400,0 L 400,300 M 500,0 L 500,300 M 600,0 L 600,300 M 700,0 L 700,300 M 800,0 L 800,300" />
+    <!-- Diagonal accents -->
+    <path d="M -100,100 L 200,400 M 200,-100 L 500,200 M 500,-100 L 800,200 M 700,-100 L 1000,200" stroke="#12162a" stroke-width="0.5" />
   </g>
+  
+  <!-- CRT Scanlines overlay -->
+  <rect width="900" height="300" class="scanlines" />
 
-  <!-- Left: Threat Targeting Crosshair (Exploiter Killer Scope) -->
+  <!-- LEFT: Target Crosshair scope -->
   <g transform="translate(130, 150)">
-    <!-- Rotating Tech Ring -->
-    <circle r="60" fill="none" stroke="#bd00ff" stroke-width="1.5" stroke-dasharray="10, 20" opacity="0.6">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
+    <!-- Rotating ticks ring -->
+    <circle r="65" fill="none" stroke="#bd00ff" stroke-width="1.5" stroke-dasharray="2, 6" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="25s" repeatCount="indefinite" />
     </circle>
-    <!-- Scope Ring -->
-    <circle r="45" fill="none" stroke="#ff0055" stroke-width="2" stroke-dasharray="25, 8" class="red-glow">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="8s" repeatCount="indefinite" />
+    <!-- Scope HUD Ring -->
+    <circle r="48" fill="none" stroke="#ff0055" stroke-width="2" stroke-dasharray="30, 10, 5, 10" class="red-glow">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="10s" repeatCount="indefinite" />
     </circle>
-    <!-- Target Scope Lines -->
+    <!-- Outer Scope Ticks -->
+    <path d="M 0,-65 L 0,-55 M 0,65 L 0,55 M -65,0 L -55,0 M 65,0 L 55,0" stroke="#bd00ff" stroke-width="1.5" />
+    <!-- Target scope locking lines -->
     <line x1="-55" y1="0" x2="-35" y2="0" stroke="#ff0055" stroke-width="2.5" />
     <line x1="35" y1="0" x2="55" y2="0" stroke="#ff0055" stroke-width="2.5" />
     <line x1="0" y1="-55" x2="0" y2="-35" stroke="#ff0055" stroke-width="2.5" />
     <line x1="0" y1="35" x2="0" y2="55" stroke="#ff0055" stroke-width="2.5" />
-    <!-- Blinking Center Laser Dot -->
-    <circle cx="0" cy="0" r="4.5" fill="#ff0055" class="red-glow">
+    <!-- Blinking laser dot -->
+    <circle cx="0" cy="0" r="5" fill="#ff0055" class="red-glow">
       <animate attributeName="opacity" values="0.1;1;0.1" dur="0.8s" repeatCount="indefinite" />
     </circle>
-    <text x="0" y="-62" text-anchor="middle" font-family="Share Tech Mono" fill="#ff0055" font-size="10" font-weight="bold" letter-spacing="1">LOCK_ON</text>
+    <text x="0" y="-72" text-anchor="middle" font-family="Share Tech Mono" fill="#ff0055" font-size="10" font-weight="bold" letter-spacing="1">LOCK_ON</text>
   </g>
 
-  <!-- Right: Secure Core (Rotating Shield Matrix) -->
+  <!-- RIGHT: Secure core shield matrix -->
   <g transform="translate(770, 150)">
-    <circle r="60" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="12, 18" opacity="0.6">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="22s" repeatCount="indefinite" />
+    <circle r="65" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="3, 7" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="25s" repeatCount="indefinite" />
     </circle>
-    <circle r="75" fill="none" stroke="#bd00ff" stroke-width="1.2" stroke-dasharray="40, 10, 5, 10" opacity="0.5">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite" />
+    <circle r="75" fill="none" stroke="#bd00ff" stroke-width="1.2" stroke-dasharray="45, 15" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="15s" repeatCount="indefinite" />
     </circle>
-    <!-- Glitching Core Symbol -->
-    <polygon points="0,-16 14,-7 14,7 0,18 -14,7 -14,-7" fill="none" stroke="#00f0ff" stroke-width="2" class="cyan-glow" />
-    <circle r="6" fill="#00f0ff" class="cyan-glow">
+    <!-- Core pentagonal key -->
+    <polygon points="0,-18 15,-8 15,8 0,20 -15,8 -15,-8" fill="none" stroke="#00f0ff" stroke-width="2.5" class="glow-cyan">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite" />
+    </polygon>
+    <circle cx="0" cy="0" r="7" fill="#00f0ff" class="glow-cyan">
       <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
     </circle>
-    <text x="0" y="-62" text-anchor="middle" font-family="Share Tech Mono" fill="#00f0ff" font-size="10" font-weight="bold" letter-spacing="1">SYS_OK</text>
+    <text x="0" y="-72" text-anchor="middle" font-family="Share Tech Mono" fill="#00f0ff" font-size="10" font-weight="bold" letter-spacing="1">SYS_ACTIVE</text>
   </g>
 
   <!-- Cyber Glitch Warning Top Center -->
@@ -212,7 +198,7 @@
     <text x="75" y="16" text-anchor="middle" class="alert-text">EXPLOIT_KILLER</text>
   </g>
 
-  <!-- Scanning Laser Line (Threat Scan) -->
+  <!-- Moving scanning laser line -->
   <line x1="0" y1="0" x2="900" y2="0" class="scanner" />
 
   <!-- Main Title -->
@@ -221,9 +207,9 @@
   <!-- Subtitle -->
   <text x="450" y="192" text-anchor="middle" class="neon-text-sub">EXPERT EXPLOITER KILLER • ADVANCED AUDITING</text>
 
-  <!-- Terminal Status Code -->
-  <text x="450" y="240" text-anchor="middle" font-family="Share Tech Mono, Courier New, monospace" fill="#ff0055" font-size="12" letter-spacing="2" style="text-shadow: 0 0 4px #ff0055; animation: text-flicker 3s infinite alternate;">
-    [STATUS: DETECTING_THREATS] -- [COUNTERMEASURES: ACTIVE] -- [MODE: EXPERT]
+  <!-- Telemetry changing hash status line -->
+  <text x="450" y="240" text-anchor="middle" font-family="Share Tech Mono, Courier New, monospace" fill="#ff0055" font-size="12" letter-spacing="2.5" style="text-shadow: 0 0 5px #ff0055;">
+    [STATUS: SCANNING_THREATS] -- [HASH: SHA256_0x9F3B] -- [MODE: ELITE_EXPERT]
   </text>
 
   <!-- Glowing Cyber Border -->
@@ -231,11 +217,11 @@
   
   <!-- Cyber Corner Tech Brackets -->
   <!-- Top Left -->
-  <path d="M 2 35 L 2 2 L 35 2 M 10 10 L 10 20 M 10 10 L 20 10" fill="none" stroke="#ff0055" stroke-width="4.5" />
+  <path d="M 2 35 L 2 2 L 35 2 M 10 10 L 10 22 M 10 10 L 22 10" fill="none" stroke="#ff0055" stroke-width="4.5" />
   <!-- Top Right -->
-  <path d="M 898 35 L 898 2 L 865 2 M 890 10 L 890 20 M 890 10 L 880 10" fill="none" stroke="#ff0055" stroke-width="4.5" />
+  <path d="M 898 35 L 898 2 L 865 2 M 890 10 L 890 22 M 890 10 L 878 10" fill="none" stroke="#ff0055" stroke-width="4.5" />
   <!-- Bottom Left -->
-  <path d="M 2 265 L 2 298 L 35 298 M 10 290 L 10 280 M 10 290 L 20 290" fill="none" stroke="#00f0ff" stroke-width="4.5" />
+  <path d="M 2 265 L 2 298 L 35 298 M 10 290 L 10 278 M 10 290 L 22 290" fill="none" stroke="#00f0ff" stroke-width="4.5" />
   <!-- Bottom Right -->
-  <path d="M 898 265 L 898 298 L 865 298 M 890 290 L 890 280 M 890 290 L 880 290" fill="none" stroke="#00f0ff" stroke-width="4.5" />
+  <path d="M 898 265 L 898 298 L 865 298 M 890 290 L 890 278 M 890 290 L 878 290" fill="none" stroke="#00f0ff" stroke-width="4.5" />
 </svg>

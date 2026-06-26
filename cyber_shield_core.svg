@@ -23,8 +23,8 @@
           filter: drop-shadow(0 15px 15px rgba(0, 240, 255, 0.2));
         }
         50% {
-          transform: perspective(600px) rotateX(50deg) rotateZ(-25deg) translateY(-12px);
-          filter: drop-shadow(0 25px 25px rgba(0, 240, 255, 0.4));
+          transform: perspective(600px) rotateX(50deg) rotateZ(-25deg) translateY(-15px);
+          filter: drop-shadow(0 25px 25px rgba(0, 240, 255, 0.45));
         }
       }
 
@@ -43,13 +43,6 @@
         filter: drop-shadow(0 0 6px #ff0055);
       }
 
-      .grid-base {
-        stroke: #12182c;
-        stroke-width: 1;
-        fill: none;
-        opacity: 0.4;
-      }
-
       .telemetry-txt {
         font-family: 'Share Tech Mono', monospace;
         font-size: 11.5px;
@@ -62,13 +55,27 @@
         text-shadow: 0 0 4px #00ff66;
         font-weight: bold;
       }
+
+      /* Hologram Scan line overlay */
+      .holo-scanline {
+        stroke: rgba(0, 240, 255, 0.5);
+        stroke-width: 1.5;
+        filter: drop-shadow(0 0 4px #00f0ff);
+        animation: holo-sweep 4s linear infinite;
+      }
+
+      @keyframes holo-sweep {
+        0% { transform: translateY(-50px); opacity: 0; }
+        10%, 90% { opacity: 0.8; }
+        100% { transform: translateY(120px); opacity: 0; }
+      }
     </style>
 
     <!-- Holographic Cyan Gradient -->
     <linearGradient id="holoGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.05" />
-      <stop offset="70%" stop-color="#00f0ff" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.8" />
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.03" />
+      <stop offset="70%" stop-color="#00f0ff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.75" />
     </linearGradient>
   </defs>
 
@@ -79,6 +86,24 @@
   <ellipse cx="450" cy="220" rx="140" ry="25" fill="none" stroke="#12182c" stroke-width="1.5" />
   <ellipse cx="450" cy="220" rx="90" ry="15" fill="none" stroke="#1c2340" stroke-width="1" />
   <polygon points="310,220 450,140 590,220" fill="url(#holoGrad)" stroke="none" opacity="0.6" />
+
+  <!-- Rising Holographic Particles (Neon Cyan) -->
+  <circle cx="430" cy="210" r="1.5" fill="#00f0ff" opacity="0.8">
+    <animate attributeName="cy" values="215;100" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.8;0" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="470" cy="215" r="2" fill="#00f0ff" opacity="0.8">
+    <animate attributeName="cy" values="220;90" dur="5s" begin="1s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.8;0" dur="5s" begin="1s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="400" cy="218" r="1" fill="#bd00ff" opacity="0.8">
+    <animate attributeName="cy" values="218;110" dur="3s" begin="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.8;0" dur="3s" begin="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="495" cy="212" r="1.5" fill="#bd00ff" opacity="0.8">
+    <animate attributeName="cy" values="212;95" dur="4.5s" begin="1.5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.8;0" dur="4.5s" begin="1.5s" repeatCount="indefinite" />
+  </circle>
 
   <!-- 3D Hologram (Floating Group) -->
   <g class="hologram-group">
@@ -98,6 +123,9 @@
     <!-- Center 3D Security Key Core -->
     <polygon points="450,115 472,128 472,152 450,165 428,152 428,128" fill="none" stroke="#00f0ff" stroke-width="2.5" class="glow-cyan" />
     <circle cx="450" cy="140" r="8" fill="#ffffff" class="glow-cyan" />
+
+    <!-- Hologram scan sweep inside 3D group -->
+    <line x1="330" y1="140" x2="570" y2="140" class="holo-scanline" />
   </g>
 
   <!-- Left Sidebar Telemetry Info -->

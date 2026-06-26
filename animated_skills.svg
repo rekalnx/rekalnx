@@ -12,15 +12,13 @@
 
       .badge-bg {
         fill: #0c0d18;
-        stroke: #bd00ff;
-        stroke-width: 1;
+        stroke-width: 1.5;
         transition: all 0.3s ease;
       }
 
       .badge-bg:hover {
-        stroke: #00f0ff;
         fill: #16192d;
-        filter: drop-shadow(0 0 6px #00f0ff);
+        cursor: pointer;
       }
 
       .badge-text {
@@ -31,30 +29,36 @@
         letter-spacing: 1px;
       }
 
-      .scanner-beam {
-        stroke: rgba(0, 240, 255, 0.4);
-        stroke-width: 1.5;
-        filter: drop-shadow(0 0 3px #00f0ff);
-        animation: badge-scan 3s infinite ease-in-out;
+      /* Hover glow colors */
+      .red-badge { stroke: #ff0055; }
+      .red-badge:hover { stroke: #ff0055; filter: drop-shadow(0 0 8px #ff0055); }
+
+      .cyan-badge { stroke: #00f0ff; }
+      .cyan-badge:hover { stroke: #00f0ff; filter: drop-shadow(0 0 8px #00f0ff); }
+
+      .purple-badge { stroke: #bd00ff; }
+      .purple-badge:hover { stroke: #bd00ff; filter: drop-shadow(0 0 8px #bd00ff); }
+
+      /* Scanning Line Animation */
+      .scan-line {
+        stroke: rgba(255, 255, 255, 0.45);
+        stroke-width: 1;
+        opacity: 0;
+        animation: scan-pills 4s infinite linear;
       }
 
-      @keyframes badge-scan {
-        0%, 100% { transform: translateX(0); }
-        50% { transform: translateX(110px); }
-      }
-
-      .purple-badge {
-        stroke: #bd00ff;
-      }
-
-      .cyan-badge {
-        stroke: #00f0ff;
-      }
-
-      .red-badge {
-        stroke: #ff0055;
+      @keyframes scan-pills {
+        0% { transform: translateX(-10px); opacity: 0; }
+        20% { opacity: 0.8; }
+        80% { opacity: 0.8; }
+        100% { transform: translateX(110px); opacity: 0; }
       }
     </style>
+
+    <!-- Scan Path Mask for pills -->
+    <clipPath id="pillClip">
+      <rect width="110" height="26" rx="13" />
+    </clipPath>
   </defs>
 
   <!-- Box Container -->
@@ -64,6 +68,7 @@
   <text x="25" y="25" font-family="'Share Tech Mono', monospace" font-size="12" fill="#00f0ff" font-weight="bold" letter-spacing="2">CORE_TECHNICAL_SKILLS // HUD_SKILLS_GRID</text>
   <line x1="0" y1="35" x2="900" y2="35" stroke="#bd00ff" stroke-width="1.5" />
 
+  <!-- Row 1 -->
   <!-- Badge 1: Smart Contracts -->
   <g transform="translate(25, 48)">
     <rect width="150" height="26" rx="13" class="badge-bg red-badge" />
@@ -91,7 +96,7 @@
   <!-- Badge 5: Python -->
   <g transform="translate(625, 48)">
     <rect width="110" height="26" rx="13" class="badge-bg purple-badge" />
-    <text x="55" y="17" text-anchor="middle" class="badge-text">🐍 PYTHON SCRIPTING</text>
+    <text x="55" y="17" text-anchor="middle" class="badge-text">🐍 PYTHON SCRIPT</text>
   </g>
 
   <!-- Badge 6: Advanced Recon -->

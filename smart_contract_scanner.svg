@@ -22,6 +22,13 @@
         text-shadow: 0 0 4px #ff0055;
       }
 
+      .line-num {
+        fill: #4c566a;
+        font-family: 'Fira Code', monospace;
+        font-size: 10px;
+        text-anchor: end;
+      }
+
       .keyword {
         fill: #bd00ff;
       }
@@ -70,6 +77,15 @@
         font-size: 12px;
         fill: #00f0ff;
       }
+
+      .check-ok {
+        fill: #00ff66;
+        font-weight: bold;
+      }
+      .check-warn {
+        fill: #ffaa00;
+        font-weight: bold;
+      }
     </style>
 
     <!-- Define the Arrow Marker -->
@@ -81,25 +97,28 @@
   <!-- Box Container -->
   <rect width="900" height="250" rx="6" class="bg" />
 
-  <!-- LEFT SIDE: Solidity Code Area -->
-  <g transform="translate(30, 55)">
-    <!-- Line 1 -->
+  <!-- LEFT SIDE: Solidity Code Area (with Line Numbers) -->
+  <g transform="translate(50, 55)">
+    <!-- Line numbers -->
+    <text x="-15" y="15" class="line-num">1</text>
+    <text x="-15" y="35" class="line-num">2</text>
+    <text x="-15" y="55" class="line-num">3</text>
+    <text x="-15" y="75" class="line-num">4</text>
+    <text x="-15" y="95" class="line-num">5</text>
+    <text x="-15" y="115" class="line-num">6</text>
+    <text x="-15" y="135" class="line-num">7</text>
+
+    <!-- Solidity Code -->
     <text y="15" class="code-line"><tspan class="keyword">contract</tspan> SolidityVault {</text>
-    <!-- Line 2 -->
     <text y="35" class="code-line">  <tspan class="keyword">mapping</tspan>(address => uint) balances;</text>
-    <!-- Line 3 -->
     <text y="55" class="code-line">  <tspan class="keyword">function</tspan> withdraw() <tspan class="keyword">public</tspan> {</text>
-    <!-- Line 4 (Vulnerable line) -->
     <text y="75" class="code-line code-highlight">    msg.sender.call{value: balances[msg.sender]}("");</text>
-    <!-- Line 5 -->
     <text y="95" class="code-line">    balances[msg.sender] = 0;</text>
-    <!-- Line 6 -->
     <text y="115" class="code-line">  }</text>
-    <!-- Line 7 -->
     <text y="135" class="code-line">}</text>
 
     <!-- Vulnerability indicator box -->
-    <rect x="0" y="62" width="370" height="18" class="vulnerability-alert" />
+    <rect x="-5" y="62" width="375" height="18" class="vulnerability-alert" />
     <!-- Alert Arrow and Label -->
     <path d="M 375,71 L 395,71" stroke="#ff0055" stroke-width="1.5" marker-end="url(#arrow)" />
     <text x="20" y="165" class="alert-tag">⚠️ CRITICAL: REENTRANCY VULNERABILITY FOUND (CWE-306)</text>
@@ -111,13 +130,18 @@
   <!-- RIGHT SIDE: Diagnostic Telemetry Logs -->
   <g transform="translate(500, 55)">
     <text y="15" class="telemetry-txt">AUDIT_TARGET: SolidityVault.sol</text>
-    <text y="35" class="telemetry-txt" style="fill: #8f9bb3;">[+] Compiler version: Solidity v0.8.20</text>
-    <text y="55" class="telemetry-txt" style="fill: #8f9bb3;">[+] Running static checkers: [Slither / Mythril]</text>
-    <text y="75" class="telemetry-txt" style="fill: #ff0055; font-weight: bold;">[!] VULNERABILITY DETECTED AT LINE 4 // CWE-306</text>
-    <text y="95" class="telemetry-txt" style="fill: #ff0055;">[!] Severity: CRITICAL // SWC-107 Reentrancy</text>
-    <text y="115" class="telemetry-txt" style="fill: #00ff66;">[+] Auto-generating mitigation recommendation...</text>
-    <text y="135" class="telemetry-txt" style="fill: #00ff66;">[+] REMEDY: Apply CEI pattern or ReentrancyGuard.</text>
-    <text y="155" class="telemetry-txt" style="fill: #00ff66;">[+] STATUS: SECURITY PATCH GENERATED // SECURE</text>
+    <text y="35" class="telemetry-txt" style="fill: #8f9bb3;">[+] AST parsed successfully. Running Slither Checkers...</text>
+    
+    <!-- Checklist items -->
+    <text y="55" class="telemetry-txt"><tspan class="check-ok">[OK]</tspan> unchecked-transfer</text>
+    <text y="70" class="telemetry-txt"><tspan class="check-ok">[OK]</tspan> shadow-state-variables</text>
+    <text y="85" class="telemetry-txt"><tspan class="check-warn">[FAIL]</tspan> reentrancy-eth (SWC-107)</text>
+    <text y="100" class="telemetry-txt"><tspan class="check-ok">[OK]</tspan> uninitialized-storage-pointers</text>
+
+    <text y="122" class="telemetry-txt" style="fill: #ff0055; font-weight: bold;">[!] VULNERABILITY LOCATED AT LINE 4</text>
+    <text y="137" class="telemetry-txt" style="fill: #00ff66;">[+] REMEDY: Apply CEI pattern or ReentrancyGuard.</text>
+    <text y="152" class="telemetry-txt" style="fill: #00ff66;">[+] REMEDY CODE: balances[msg.sender] = 0; before call.</text>
+    <text y="167" class="telemetry-txt" style="fill: #00ff66;">[+] STATUS: SECURITY PATCH GENERATED // SECURE</text>
   </g>
 
   <!-- Scanner Beam -->

@@ -4,10 +4,15 @@
       @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&amp;family=Share+Tech+Mono&amp;display=swap');
       
       .bg {
-        fill: #04050a;
+        fill: #030408;
         stroke: #bd00ff;
         stroke-width: 1.5;
-        filter: drop-shadow(0 0 8px rgba(189, 0, 255, 0.15));
+        filter: drop-shadow(0 0 8px rgba(189, 0, 255, 0.2));
+      }
+      
+      .scanlines {
+        fill: url(#scanlinePattern);
+        opacity: 0.12;
       }
 
       .glitch-group {
@@ -23,62 +28,79 @@
         font-size: 18px;
         fill: #00f0ff;
         letter-spacing: 5px;
-        text-shadow: 0 0 5px #00f0ff;
+        animation: glitch-chromatic-1 5s infinite;
       }
 
       .red-alert {
         fill: #ff0055;
-        text-shadow: 0 0 5px #ff0055;
+        text-shadow: 0 0 6px #ff0055;
+      }
+      
+      .green-active {
+        fill: #00ff66;
+        text-shadow: 0 0 6px #00ff66;
+        animation: blink 1.2s step-end infinite;
       }
 
-      /* Glitch Keyframe Animations */
-      .glitch-1 {
-        animation: glitch-anim-1 4s infinite steps(2) alternate;
+      /* Glitch Chromatic Aberration Animations */
+      .glitch-txt {
+        animation: glitch-chromatic-2 4.5s infinite;
       }
 
-      .glitch-2 {
-        animation: glitch-anim-2 3.5s infinite steps(1) alternate-reverse;
-      }
-
-      @keyframes glitch-anim-1 {
-        0%, 95%, 98%, 100% {
+      @keyframes glitch-chromatic-1 {
+        0%, 94%, 96%, 98%, 100% {
+          text-shadow: 0 0 5px #00f0ff;
           transform: translate(0, 0) skew(0deg);
-          filter: none;
         }
-        96% {
-          transform: translate(-3px, 2px) skew(-5deg);
-          filter: drop-shadow(2px 0 0 #ff0055) drop-shadow(-2px 0 0 #00f0ff);
+        95% {
+          text-shadow: 2.5px -1.5px 0 #ff0055, -2.5px 1.5px 0 #00f0ff;
+          transform: translate(-2px, 1px) skew(-3deg);
         }
         97% {
-          transform: translate(3px, -2px) skew(5deg);
-          filter: drop-shadow(-2px 0 0 #ff0055) drop-shadow(2px 0 0 #00f0ff);
-        }
-        99% {
-          transform: translate(-1px, -1px) skew(-2deg);
+          text-shadow: -2.5px 1.5px 0 #ff0055, 2.5px -1.5px 0 #00f0ff;
+          transform: translate(2px, -1px) skew(3deg);
         }
       }
 
-      @keyframes glitch-anim-2 {
-        0%, 92%, 96%, 100% {
+      @keyframes glitch-chromatic-2 {
+        0%, 91%, 95%, 99%, 100% {
+          text-shadow: none;
           transform: translate(0, 0);
-          opacity: 1;
         }
-        93%, 95% {
-          transform: translate(4px, -3px);
-          opacity: 0.8;
+        92%, 94% {
+          text-shadow: 3px -2px 0 #ff0055, -3px 2px 0 #00f0ff;
+          transform: translate(3px, -2px);
+          fill: #ffffff;
+        }
+        93% {
+          transform: translate(-3px, 2px);
           fill: #ff0055;
         }
-        94% {
-          transform: translate(-4px, 3px);
-          opacity: 0.9;
-          fill: #00f0ff;
-        }
+      }
+
+      @keyframes blink {
+        from, to { opacity: 0; }
+        50% { opacity: 1; }
+      }
+
+      .telemetry-line {
+        stroke: #1c2340;
+        stroke-width: 1;
+        stroke-dasharray: 4, 4;
       }
     </style>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlinePattern" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.5" />
+    </pattern>
   </defs>
 
   <!-- Box Container -->
   <rect width="900" height="120" rx="6" class="bg" />
+  
+  <!-- CRT Scanlines -->
+  <rect width="900" height="120" class="scanlines" rx="6" />
 
   <!-- Corner Brackets -->
   <path d="M 2 15 L 2 2 L 15 2" fill="none" stroke="#00f0ff" stroke-width="3" />
@@ -86,15 +108,19 @@
   <path d="M 2 105 L 2 118 L 15 118" fill="none" stroke="#bd00ff" stroke-width="3" />
   <path d="M 898 105 L 898 118 L 883 118" fill="none" stroke="#bd00ff" stroke-width="3" />
 
+  <!-- Telemetry Lines -->
+  <line x1="30" y1="46" x2="870" y2="46" class="telemetry-line" />
+  <line x1="30" y1="76" x2="870" y2="76" class="telemetry-line" />
+
   <!-- Bio Details with Glitch Effects -->
   <g class="glitch-group" transform="translate(30, 0)">
     <!-- Header -->
-    <text x="0" y="38" class="header-text glitch-1">REIHAN VALENTINO YUDISTIRA // CORE_IDENTITY</text>
+    <text x="0" y="38" class="header-text">REIHAN VALENTINO YUDISTIRA // CORE_IDENTITY <tspan class="green-active">[ACTIVE]</tspan></text>
     
     <!-- Info Line 1 -->
-    <text x="0" y="68" class="glitch-2">LOC: BOGOR, INDONESIA // CLASS: EXPERT_SECURITY_AUDITOR</text>
+    <text x="0" y="67" class="glitch-txt">LOC: BOGOR, INDONESIA // CLASS: EXPERT_SECURITY_AUDITOR</text>
     
     <!-- Info Line 2 -->
-    <text x="0" y="94" class="glitch-1">NASA VDP VULNERABILITY DISC: <tspan class="red-alert">RECOGNIZED (LoR)</tspan> // OTN 2024 ROBOTICS: COMPETITOR</text>
+    <text x="0" y="95" class="glitch-txt">NASA VDP VULNERABILITY DISC: <tspan class="red-alert">RECOGNIZED (LoR)</tspan> // OTN 2024 ROBOTICS: COMPETITOR</text>
   </g>
 </svg>

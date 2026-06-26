@@ -57,6 +57,20 @@
         0%, 100% { opacity: 0.3; }
         50% { opacity: 1; }
       }
+
+      /* Rippling Rings on Emitter Target */
+      .ripple {
+        fill: none;
+        stroke-width: 1.5;
+        transform-origin: 640px 180px;
+        animation: ripple-out 3s infinite cubic-bezier(0.1, 0.8, 0.3, 1);
+      }
+
+      @keyframes ripple-out {
+        0% { r: 5px; opacity: 1; stroke: #ff0055; }
+        50% { stroke: #bd00ff; }
+        100% { r: 40px; opacity: 0; stroke: #00f0ff; }
+      }
     </style>
   </defs>
 
@@ -84,6 +98,11 @@
   <!-- Indonesia / Target Core (Bogor) -->
   <circle cx="640" cy="180" r="6" class="cyber-dot" style="transform-origin: 640px 180px;" />
   <text x="640" y="200" font-family="Share Tech Mono" font-size="9" fill="#00f0ff" text-anchor="middle" font-weight="bold">DEF_CENTER_ID</text>
+
+  <!-- Rippling Impact Rings at ID -->
+  <circle cx="640" cy="180" r="10" class="ripple" />
+  <circle cx="640" cy="180" r="10" class="ripple" style="animation-delay: 1s;" />
+  <circle cx="640" cy="180" r="10" class="ripple" style="animation-delay: 2s;" />
 
   <!-- Attack Laser Arcs -->
   <!-- US to ID -->

@@ -54,6 +54,13 @@
         0% { stroke-dashoffset: 0; }
         100% { stroke-dashoffset: -120; }
       }
+      
+      .radar-sweep {
+        stroke: #00f0ff;
+        stroke-width: 1.5;
+        opacity: 0.7;
+        filter: drop-shadow(0 0 4px #00f0ff);
+      }
     </style>
   </defs>
 
@@ -65,6 +72,9 @@
   <circle cx="450" cy="140" r="55" fill="none" stroke="#12182c" stroke-width="0.75" />
   <line x1="450" y1="35" x2="450" y2="245" stroke="#12182c" stroke-dasharray="3, 3" stroke-width="1" />
   <line x1="300" y1="140" x2="600" y2="140" stroke="#12182c" stroke-dasharray="3, 3" stroke-width="1" />
+  
+  <!-- Outer Ticks around Radar -->
+  <path d="M 450,50 L 450,55 M 450,225 L 450,230 M 360,140 L 365,140 M 535,140 L 540,140" stroke="#1c2340" stroke-width="1.5" />
 
   <!-- Scope HUD (Rotated and Pulsed) -->
   <g transform="translate(450, 140)">
@@ -82,6 +92,16 @@
     <polygon points="0,-12 10,0 0,12 -10,0" fill="none" stroke="#ff0055" stroke-width="2" class="glowing-red">
       <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite" />
     </polygon>
+
+    <!-- Live Radar Sweep Line -->
+    <line x1="0" y1="0" x2="80" y2="0" class="radar-sweep">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite" />
+    </line>
+    
+    <!-- Radar Sweep Glow segment -->
+    <path d="M 0,0 L 76,25 A 80,80 0 0,0 80,0 Z" fill="url(#sweepGrad)" opacity="0.4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite" />
+    </path>
 
     <!-- Lock Label -->
     <text x="0" y="-95" text-anchor="middle" class="scope-label">LOCK_ON: VULN_NODE_0x93A</text>
@@ -114,4 +134,9 @@
   <rect width="900" height="30" fill="#04050a" opacity="0.85" />
   <text x="25" y="20" font-family="'Share Tech Mono', monospace" font-size="12" fill="#ff0055" font-weight="bold" letter-spacing="2">TELEMETRY_TARGETING_HUD // COUNTER_SYSTEMS_MONITOR</text>
   <line x1="0" y1="35" x2="900" y2="35" stroke="#00f0ff" stroke-width="1.5" />
+  
+  <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
+    <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.3" />
+  </linearGradient>
 </svg>

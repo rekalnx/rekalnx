@@ -37,8 +37,8 @@
       }
 
       @keyframes pulse-skill {
-        0%, 100% { fill: rgba(0, 240, 255, 0.25); stroke: #00f0ff; }
-        50% { fill: rgba(189, 0, 255, 0.35); stroke: #bd00ff; filter: drop-shadow(0 0 8px #bd00ff); }
+        0%, 100% { fill: rgba(0, 240, 255, 0.2); stroke: #00f0ff; }
+        50% { fill: rgba(189, 0, 255, 0.3); stroke: #bd00ff; filter: drop-shadow(0 0 8px #bd00ff); }
       }
 
       .skill-node {
@@ -66,22 +66,53 @@
         font-size: 11px;
         fill: #8f9bb3;
       }
+
+      /* Animated Level Status Loading Bars */
+      .level-bar-bg {
+        fill: #12182c;
+        stroke: #1b2340;
+        stroke-width: 1;
+      }
+
+      .level-bar-fill {
+        fill: #00f0ff;
+        filter: drop-shadow(0 0 3px #00f0ff);
+        animation: loading-bar 2.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+      }
+
+      @keyframes loading-bar {
+        0% { width: 0; }
+      }
     </style>
   </defs>
 
   <!-- Box Container -->
   <rect width="900" height="250" rx="6" class="bg" />
 
-  <!-- LEFT SIDE: Capabilities Info -->
+  <!-- LEFT SIDE: Capabilities Info & Animated Progress Bars -->
   <g transform="translate(40, 65)">
     <text y="15" class="info-title">🛡️ SECTOR: BLOCKCHAIN &amp; WEB3</text>
-    <text y="35" class="info-text">- Solidity Audit: Expert level</text>
-    <text y="55" class="info-text">- Vulnerability mitigation rate: 98%</text>
-    <text y="75" class="info-text">- Smart Contract audits completed: 33+</text>
-    <text y="95" class="info-text">- Key focus: Reentrancy, Overflow, Access Control</text>
+    
+    <!-- Bar 1: Smart Contracts -->
+    <text x="0" y="38" class="info-text">Smart Contract Security</text>
+    <rect x="0" y="44" width="180" height="5" rx="2.5" class="level-bar-bg" />
+    <rect x="0" y="44" width="171" height="5" rx="2.5" class="level-bar-fill" /> <!-- 95% -->
+
+    <!-- Bar 2: API Security -->
+    <text x="0" y="70" class="info-text">API Pen-testing</text>
+    <rect x="0" y="76" width="180" height="5" rx="2.5" class="level-bar-bg" />
+    <rect x="0" y="76" width="153" height="5" rx="2.5" class="level-bar-fill" style="fill: #bd00ff; filter: drop-shadow(0 0 3px #bd00ff); animation-delay: 0.3s;" /> <!-- 85% -->
+    
+    <text x="0" y="105" class="info-text">Smart Contract Audits: 33+ completed</text>
+    <text x="0" y="122" class="info-text">Key focus: Reentrancy, Access Control</text>
   </g>
 
-  <!-- CENTER: Radar Grid (Pentagons, Centered at 450, 140) -->
+  <!-- CENTER: Radar Grid & Rotating HUD Rings (Centered at 450, 140) -->
+  <!-- Rotating Outer Telemetry Ring -->
+  <circle cx="450" cy="140" r="100" fill="none" stroke="#bd00ff" stroke-width="0.75" stroke-dasharray="4, 12" opacity="0.5">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="25s" repeatCount="indefinite" />
+  </circle>
+
   <!-- Level 4 (Outer) -->
   <polygon points="450,60 530,118 499,212 401,212 370,118" class="chart-grid" stroke-dasharray="2, 2" />
   <!-- Level 3 -->
@@ -110,18 +141,27 @@
 
   <!-- Vertices Labels -->
   <text x="450" y="52" text-anchor="middle" class="chart-label" style="fill: #ff0055;">🛡️ SMART_CONTRACTS (95%)</text>
-  <text x="540" y="121" text-anchor="start" class="chart-label">🌐 WEB_PENTEST (90%)</text>
-  <text x="509" y="222" text-anchor="start" class="chart-label">🔍 RECON_AUTO (92%)</text>
-  <text x="391" y="222" text-anchor="end" class="chart-label">🔌 API_AUDITS (85%)</text>
-  <text x="360" y="121" text-anchor="end" class="chart-label">🤖 ROBOTICS_IOT (80%)</text>
+  <text x="542" y="121" text-anchor="start" class="chart-label">🌐 WEB_PENTEST (90%)</text>
+  <text x="511" y="222" text-anchor="start" class="chart-label">🔍 RECON_AUTO (92%)</text>
+  <text x="389" y="222" text-anchor="end" class="chart-label">🔌 API_AUDITS (85%)</text>
+  <text x="358" y="121" text-anchor="end" class="chart-label">🤖 ROBOTICS_IOT (80%)</text>
 
-  <!-- RIGHT SIDE: Capabilities Info -->
-  <g transform="translate(640, 65)">
+  <!-- RIGHT SIDE: Capabilities Info & Animated Progress Bars -->
+  <g transform="translate(680, 65)">
     <text y="15" class="info-title">💥 SECTOR: OFFENSIVE &amp; RECON</text>
-    <text y="35" class="info-text">- Web Pentesting: Advanced</text>
-    <text y="55" class="info-text">- OSINT &amp; Recon: Automation expert</text>
-    <text y="75" class="info-text">- Resolved H1 Reports: 13+</text>
-    <text y="95" class="info-text">- Custom recon toolkit: Active</text>
+    
+    <!-- Bar 3: Web Pentesting -->
+    <text x="0" y="38" class="info-text">Web App Pen-testing</text>
+    <rect x="0" y="44" width="180" height="5" rx="2.5" class="level-bar-bg" />
+    <rect x="0" y="44" width="162" height="5" rx="2.5" class="level-bar-fill" style="animation-delay: 0.2s;" /> <!-- 90% -->
+
+    <!-- Bar 4: Recon Automation -->
+    <text x="0" y="70" class="info-text">Recon Automation</text>
+    <rect x="0" y="76" width="180" height="5" rx="2.5" class="level-bar-bg" />
+    <rect x="0" y="76" width="165" height="5" rx="2.5" class="level-bar-fill" style="fill: #bd00ff; filter: drop-shadow(0 0 3px #bd00ff); animation-delay: 0.5s;" /> <!-- 92% -->
+    
+    <text x="0" y="105" class="info-text">Resolved H1 Reports: 13+</text>
+    <text x="0" y="122" class="info-text">Custom recon tooling: Active</text>
   </g>
 
   <!-- Card Header overlay -->
