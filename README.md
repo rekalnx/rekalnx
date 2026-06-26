@@ -95,8 +95,13 @@
 <br>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rekalnx&layout=compact&theme=tokyonight" alt="rekalnx Top Languages" width="49%">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rekalnx&theme=tokyonight" alt="rekalnx GitHub Streak" width="49%">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rekalnx&layout=compact&theme=tokyonight" alt="rekalnx Top Languages" width="100%">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rekalnx&theme=tokyonight" alt="rekalnx GitHub Streak" width="100%">
 </div>
 
 <br>
