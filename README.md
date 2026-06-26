@@ -84,8 +84,4 @@ I am a **Cybersecurity Researcher**, **Bug Bounty Hunter**, and **Smart Contract
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=rekalnx&theme=tokyonight" alt="rekalnx GitHub Streak" width="98%">
 </div>
 
----
 
-<div align="center">
-  <sub>Managed with 💜 by Antigravity AI. Let's secure the future together!</sub>
-</div>
