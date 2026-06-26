@@ -34,7 +34,6 @@ I am a **Cybersecurity Researcher**, **Bug Bounty Hunter**, and **Smart Contract
 - **Reputation**: `305`
 - **Signal**: `4.82` (45th Percentile)
 - **Impact**: `28.33` (Top **92nd Percentile** globally!)
-- **Total Earnings on Bilt Technologies**: **$11,000+** in bounties, with multiple Critical and High severity reports resolved.
 
 #### 🐛 **HackenProof Profile (`valentinoreihan`)**
 - **Rank**: `#1430` globally
