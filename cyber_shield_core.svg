@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
+      
+      .bg {
+        fill: #020306;
+        stroke: #00f0ff;
+        stroke-width: 1.5;
+        filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.15));
+      }
+
+      /* Hologram 3D Floating Perspective */
+      .hologram-group {
+        transform: perspective(600px) rotateX(50deg) rotateZ(-25deg);
+        transform-origin: 450px 140px;
+        animation: float 5s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: perspective(600px) rotateX(50deg) rotateZ(-25deg) translateY(0px);
+          filter: drop-shadow(0 15px 15px rgba(0, 240, 255, 0.2));
+        }
+        50% {
+          transform: perspective(600px) rotateX(50deg) rotateZ(-25deg) translateY(-12px);
+          filter: drop-shadow(0 25px 25px rgba(0, 240, 255, 0.4));
+        }
+      }
+
+      .glow-cyan {
+        stroke: #00f0ff;
+        filter: drop-shadow(0 0 6px #00f0ff);
+      }
+
+      .glow-purple {
+        stroke: #bd00ff;
+        filter: drop-shadow(0 0 6px #bd00ff);
+      }
+
+      .glow-red {
+        stroke: #ff0055;
+        filter: drop-shadow(0 0 6px #ff0055);
+      }
+
+      .grid-base {
+        stroke: #12182c;
+        stroke-width: 1;
+        fill: none;
+        opacity: 0.4;
+      }
+
+      .telemetry-txt {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 11.5px;
+        fill: #8f9bb3;
+        letter-spacing: 1px;
+      }
+      
+      .status-active {
+        fill: #00ff66;
+        text-shadow: 0 0 4px #00ff66;
+        font-weight: bold;
+      }
+    </style>
+
+    <!-- Holographic Cyan Gradient -->
+    <linearGradient id="holoGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.05" />
+      <stop offset="70%" stop-color="#00f0ff" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Box Container -->
+  <rect width="900" height="300" rx="6" class="bg" />
+
+  <!-- Emitter Base Projection Lines (2D Background) -->
+  <ellipse cx="450" cy="220" rx="140" ry="25" fill="none" stroke="#12182c" stroke-width="1.5" />
+  <ellipse cx="450" cy="220" rx="90" ry="15" fill="none" stroke="#1c2340" stroke-width="1" />
+  <polygon points="310,220 450,140 590,220" fill="url(#holoGrad)" stroke="none" opacity="0.6" />
+
+  <!-- 3D Hologram (Floating Group) -->
+  <g class="hologram-group">
+    <!-- Concentric Hologram Rings -->
+    <circle cx="450" cy="140" r="100" fill="none" stroke="#bd00ff" stroke-width="1" stroke-dasharray="10, 30" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="450" cy="140" r="85" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="40, 20, 10, 20" class="glow-cyan">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="12s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="450" cy="140" r="60" fill="none" stroke="#ff0055" stroke-width="2" stroke-dasharray="80, 40" class="glow-red">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Center 3D Security Key Core -->
+    <polygon points="450,115 472,128 472,152 450,165 428,152 428,128" fill="none" stroke="#00f0ff" stroke-width="2.5" class="glow-cyan" />
+    <circle cx="450" cy="140" r="8" fill="#ffffff" class="glow-cyan" />
+  </g>
+
+  <!-- Left Sidebar Telemetry Info -->
+  <g transform="translate(40, 65)">
+    <text y="15" class="telemetry-txt" style="fill: #00f0ff; font-weight: bold;">[+] HOLO_PROJECTOR: SECURE</text>
+    <text y="35" class="telemetry-txt">INTEGRITY: <tspan class="status-active">100% OK</tspan></text>
+    <text y="55" class="telemetry-txt">SHIELD_STATUS: <tspan class="status-active">ARMED</tspan></text>
+    <text y="75" class="telemetry-txt">DEFI_SECURE_LOCK: <tspan class="status-active">TRUE</tspan></text>
+    <text y="95" class="telemetry-txt">ATTACK_MITIGATION: <tspan class="status-active">AUTO</tspan></text>
+  </g>
+
+  <!-- Right Sidebar Telemetry Info -->
+  <g transform="translate(620, 65)">
+    <text y="15" class="telemetry-txt" style="fill: #ff0055; font-weight: bold;">[!] MITIGATION_ENGINE</text>
+    <text y="35" class="telemetry-txt">NODE_CLASS: ADVANCED</text>
+    <text y="55" class="telemetry-txt">THREAT_LEVEL: CRITICAL</text>
+    <text y="75" class="telemetry-txt">RECON_MODE: CONTINUOUS</text>
+    <text y="95" class="telemetry-txt">DEFENSE_CORE: <tspan style="fill: #00f0ff;">ACTIVE</tspan></text>
+  </g>
+
+  <!-- Card Header overlay -->
+  <rect width="900" height="30" fill="#04050a" opacity="0.85" />
+  <text x="25" y="20" font-family="'Share Tech Mono', monospace" font-size="12" fill="#00f0ff" font-weight="bold" letter-spacing="2">ISOMETRIC_3D_HOLOSHIELD_CORE // CORE_SECURITY_MATRIX</text>
+  <line x1="0" y1="35" x2="900" y2="35" stroke="#bd00ff" stroke-width="1.5" />
+</svg>

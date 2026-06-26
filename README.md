@@ -24,6 +24,14 @@
 
 ---
 
+### 🔮 Isometric 3D Holoshield Projection
+
+<div align="center">
+  <img src="cyber_shield_core.svg" alt="Isometric 3D Holoshield Core" width="100%">
+</div>
+
+---
+
 ### 🖥️ Security Console Diagnostic & Threat Monitoring
 
 <div align="center">
