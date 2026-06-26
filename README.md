@@ -1,7 +1,7 @@
 # Hi there, I'm Reihan Valentino Yudistira 👋 (aka @rekalnx)
 
 <div align="center">
-  <img src="cybersecurity_banner.svg" alt="Reihan Valentino Yudistira Banner" width="100%">
+  <img src="cybersecurity_banner_v2.svg" alt="Reihan Valentino Yudistira Banner" width="100%">
 </div>
 
 <br>
