@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code&amp;family=Share+Tech+Mono&amp;display=swap');
+      
+      .bg {
+        fill: #030407;
+        stroke: #bd00ff;
+        stroke-width: 1.5;
+        filter: drop-shadow(0 0 6px rgba(189, 0, 255, 0.1));
+      }
+
+      .code-line {
+        font-family: 'Fira Code', monospace;
+        font-size: 11px;
+        fill: #8f9bb3;
+      }
+
+      .code-highlight {
+        fill: #ff0055;
+        font-weight: bold;
+        text-shadow: 0 0 4px #ff0055;
+      }
+
+      .keyword {
+        fill: #bd00ff;
+      }
+
+      .scanner-beam {
+        stroke: rgba(189, 0, 255, 0.5);
+        stroke-width: 2.5;
+        filter: drop-shadow(0 0 5px #bd00ff);
+        animation: audit-scan 5s linear infinite;
+      }
+
+      @keyframes audit-scan {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(180px); }
+        100% { transform: translateY(0); }
+      }
+
+      .vulnerability-alert {
+        stroke: #ff0055;
+        stroke-width: 1;
+        fill: none;
+        stroke-dasharray: 4;
+        animation: blink-border 1.5s infinite steps(2);
+      }
+
+      @keyframes blink-border {
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; }
+      }
+
+      .alert-tag {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 10px;
+        fill: #ff0055;
+        font-weight: bold;
+        animation: blink-text 1.5s infinite alternate;
+      }
+
+      @keyframes blink-text {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; text-shadow: 0 0 4px #ff0055; }
+      }
+    </style>
+  </defs>
+
+  <!-- Box Container -->
+  <rect width="440" height="250" rx="5" class="bg" />
+
+  <!-- Code Area -->
+  <g transform="translate(20, 55)">
+    <!-- Line 1 -->
+    <text y="15" class="code-line"><tspan class="keyword">contract</tspan> SolidityVault {</text>
+    <!-- Line 2 -->
+    <text y="35" class="code-line">  <tspan class="keyword">mapping</tspan>(address => uint) balances;</text>
+    <!-- Line 3 -->
+    <text y="55" class="code-line">  <tspan class="keyword">function</tspan> withdraw() <tspan class="keyword">public</tspan> {</text>
+    <!-- Line 4 (Vulnerable line) -->
+    <text y="75" class="code-line code-highlight">    msg.sender.call{value: balances[msg.sender]}("");</text>
+    <!-- Line 5 -->
+    <text y="95" class="code-line">    balances[msg.sender] = 0;</text>
+    <!-- Line 6 -->
+    <text y="115" class="code-line">  }</text>
+    <!-- Line 7 -->
+    <text y="135" class="code-line">}</text>
+
+    <!-- Vulnerability indicator box -->
+    <rect x="0" y="62" width="370" height="18" class="vulnerability-alert" />
+    <!-- Alert Arrow and Label -->
+    <path d="M 375,71 L 390,71" stroke="#ff0055" stroke-width="1.5" marker-end="url(#arrow)" />
+    <text x="260" y="160" class="alert-tag">⚠️ CRITICAL: REENTRANCY DETECTED (CWE-306)</text>
+  </g>
+
+  <!-- Scanner Line -->
+  <line x1="10" y1="40" x2="430" y2="40" class="scanner-beam" />
+
+  <!-- Card Header overlay -->
+  <rect width="440" height="30" fill="#04050a" opacity="0.85" />
+  <text x="20" y="20" font-family="'Share Tech Mono', monospace" font-size="11" fill="#bd00ff" font-weight="bold" letter-spacing="1">SMART_CONTRACT_VULN_SCANNER</text>
+  <line x1="0" y1="30" x2="440" y2="30" stroke="#ff0055" stroke-width="1" />
+</svg>

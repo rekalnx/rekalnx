@@ -18,21 +18,43 @@
 
 ### 🛡️ About Me
 
-I am a **Cybersecurity Researcher**, **Bug Bounty Hunter**, and **Smart Contract Auditor** based in Bogor, Indonesia. I specialize in identifying critical vulnerabilities in web applications, APIs, and Solidity-based smart contracts, helping organizations secure their digital infrastructure.
-
-- 🔭 **Current Focus**: Web3 security, Solidity auditing, and advanced threat hunting.
-- 🌐 **Personal Website**: [valentinoserv.my.id](https://valentinoserv.my.id)
-- 🚀 **NASA VDP Recognition**: Proudly received a **Letter of Recommendation (LoR)** from the **NASA Vulnerability Disclosure Program** for reporting security vulnerabilities.
-- 🥇 **Robotics Background**: Represented my school (SMK Plus Pelita Nusantara) in the **National TIK and Informatics Olympiad (OTN) 2024** (Robotik Rancang Bangun category).
-- 💬 **Ask me about**: Bug bounty methodologies, recon automation, and Solidity smart contract vulnerabilities.
+<div align="center">
+  <img src="cyber_bio_glitch.svg" alt="Reihan Valentino Yudistira Bio" width="100%">
+</div>
 
 ---
 
-### 🖥️ Security Console Diagnostic
+### 🖥️ Live Hacking Terminal Simulation & Threat Monitoring
 
-<div align="center">
+<p align="center">
   <img src="hacker_terminal.svg" alt="Cyber Security Diagnostic Terminal Console" width="100%">
-</div>
+</p>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="10">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="matrix_code_rain.svg" alt="Live Code Streams" width="100%">
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="cyber_threat_map.svg" alt="Threat Map" width="100%">
+    </td>
+  </tr>
+</table>
+
+---
+
+### 🔍 Security Auditing Core & Telemetry
+
+<table width="100%" border="0" cellpadding="0" cellspacing="10">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="smart_contract_scanner.svg" alt="Smart Contract Scanner" width="100%">
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="telemetry_crosshair.svg" alt="Telemetry Crosshair" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -50,51 +72,36 @@ I am a **Cybersecurity Researcher**, **Bug Bounty Hunter**, and **Smart Contract
 
 ---
 
-### 🚀 Technical Skills & Vulnerability Experience
+### 🚀 Technical Skills
 
-<table>
+<div align="center">
+  <img src="animated_skills.svg" alt="Cyber Skills" width="100%">
+</div>
+
+---
+
+### 📊 Capabilities Map & GitHub Stats
+
+<table width="100%" border="0" cellpadding="0" cellspacing="10">
   <tr>
-    <td valign="top" width="50%">
-      <h4>🛡️ Cybersecurity & Auditing</h4>
-      <ul>
-        <li><b>Smart Contract Security</b>: Solidity auditing, DeFi protocols</li>
-        <li><b>Web & API Penetration Testing</b>: OWASP Top 10, Auth Bypasses</li>
-        <li><b>Reconnaissance</b>: Subfinder, Findomain, Nuclei automation</li>
-        <li><b>Key Strengths</b>: CWE-306 (Missing Auth), CWE-598 (Sensitive GET Requests), CWE-200 (Info Disclosure)</li>
-      </ul>
+    <td width="50%" align="center" valign="top">
+      <img src="hacker_radar_chart.svg" alt="Capabilities Map" width="100%">
     </td>
-    <td valign="top" width="50%">
-      <h4>💻 Languages & Tooling</h4>
-      <ul>
-        <li><b>Languages</b>: Solidity, Python, JavaScript, Bash, C/C++ (Arduino/IoT)</li>
-        <li><b>Security Tools</b>: Burp Suite, Nuclei, Nmap, Metasploit, Subfinder</li>
-        <li><b>Infrastructure</b>: Linux, Zsh, Docker, Git</li>
-      </ul>
+    <td width="50%" align="center" valign="top">
+      <img src="https://github-readme-stats.vercel.app/api?username=rekalnx&show_icons=true&theme=tokyonight&count_private=true" alt="rekalnx GitHub Stats" width="100%">
     </td>
   </tr>
 </table>
 
----
-
-### 📊 GitHub & Hack Stats
-
 <br>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=rekalnx&show_icons=true&theme=tokyonight&count_private=true" alt="rekalnx GitHub Stats" width="48%">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rekalnx&layout=compact&theme=tokyonight" alt="rekalnx Top Languages" width="48%">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rekalnx&layout=compact&theme=tokyonight" alt="rekalnx Top Languages" width="49%">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rekalnx&theme=tokyonight" alt="rekalnx GitHub Streak" width="49%">
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rekalnx&theme=tokyonight" alt="rekalnx GitHub Streak" width="98%">
+  <img src="https://ghchart.rshah.org/00f0ff/rekalnx" alt="rekalnx's Github Contributions" width="100%">
 </div>
-
-<br>
-
-<div align="center">
-  <img src="https://ghchart.rshah.org/00f0ff/rekalnx" alt="rekalnx's Github Contributions" width="98%">
-</div>
-
-
