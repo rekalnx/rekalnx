@@ -24,23 +24,37 @@
 
 ---
 
-### 🖥️ Live Hacking Terminal Simulation & Threat Monitoring
+### 🖥️ Security Console Diagnostic & Threat Monitoring
 
-<p align="center">
+<div align="center">
   <img src="hacker_terminal.svg" alt="Cyber Security Diagnostic Terminal Console" width="100%">
-</p>
+</div>
 
-| Live Code Streams | Threat Map Simulation |
-| :---: | :---: |
-| ![Live Code Streams](matrix_code_rain.svg) | ![Threat Map](cyber_threat_map.svg) |
+<br>
+
+<div align="center">
+  <img src="matrix_code_rain.svg" alt="Live Code Streams" width="100%">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="cyber_threat_map.svg" alt="Threat Map" width="100%">
+</div>
 
 ---
 
 ### 🔍 Security Auditing Core & Telemetry
 
-| Smart Contract Scanner HUD | Telemetry HUD |
-| :---: | :---: |
-| ![Smart Contract Scanner](smart_contract_scanner.svg) | ![Telemetry Crosshair](telemetry_crosshair.svg) |
+<div align="center">
+  <img src="smart_contract_scanner.svg" alt="Smart Contract Scanner" width="100%">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="telemetry_crosshair.svg" alt="Telemetry Crosshair" width="100%">
+</div>
 
 ---
 
@@ -68,9 +82,15 @@
 
 ### 📊 Capabilities Map & GitHub Stats
 
-| Capabilities Map | GitHub Stats |
-| :---: | :---: |
-| ![Capabilities Map](hacker_radar_chart.svg) | ![rekalnx GitHub Stats](https://github-readme-stats.vercel.app/api?username=rekalnx&show_icons=true&theme=tokyonight&count_private=true) |
+<div align="center">
+  <img src="hacker_radar_chart.svg" alt="Capabilities Map" width="100%">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=rekalnx&show_icons=true&theme=tokyonight&count_private=true" alt="rekalnx GitHub Stats" width="100%">
+</div>
 
 <br>
 

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" width="100%" height="100%">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fira+Code&amp;family=Share+Tech+Mono&amp;display=swap');
@@ -7,7 +7,7 @@
         fill: #030407;
         stroke: #bd00ff;
         stroke-width: 1.5;
-        filter: drop-shadow(0 0 6px rgba(189, 0, 255, 0.1));
+        filter: drop-shadow(0 0 8px rgba(189, 0, 255, 0.15));
       }
 
       .code-line {
@@ -54,7 +54,7 @@
 
       .alert-tag {
         font-family: 'Share Tech Mono', monospace;
-        font-size: 10px;
+        font-size: 11px;
         fill: #ff0055;
         font-weight: bold;
         animation: blink-text 1.5s infinite alternate;
@@ -64,14 +64,25 @@
         0%, 100% { opacity: 0.3; }
         50% { opacity: 1; text-shadow: 0 0 4px #ff0055; }
       }
+      
+      .telemetry-txt {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 12px;
+        fill: #00f0ff;
+      }
     </style>
+
+    <!-- Define the Arrow Marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff0055" />
+    </marker>
   </defs>
 
   <!-- Box Container -->
-  <rect width="440" height="250" rx="5" class="bg" />
+  <rect width="900" height="250" rx="6" class="bg" />
 
-  <!-- Code Area -->
-  <g transform="translate(20, 55)">
+  <!-- LEFT SIDE: Solidity Code Area -->
+  <g transform="translate(30, 55)">
     <!-- Line 1 -->
     <text y="15" class="code-line"><tspan class="keyword">contract</tspan> SolidityVault {</text>
     <!-- Line 2 -->
@@ -90,15 +101,30 @@
     <!-- Vulnerability indicator box -->
     <rect x="0" y="62" width="370" height="18" class="vulnerability-alert" />
     <!-- Alert Arrow and Label -->
-    <path d="M 375,71 L 390,71" stroke="#ff0055" stroke-width="1.5" marker-end="url(#arrow)" />
-    <text x="260" y="160" class="alert-tag">⚠️ CRITICAL: REENTRANCY DETECTED (CWE-306)</text>
+    <path d="M 375,71 L 395,71" stroke="#ff0055" stroke-width="1.5" marker-end="url(#arrow)" />
+    <text x="20" y="165" class="alert-tag">⚠️ CRITICAL: REENTRANCY VULNERABILITY FOUND (CWE-306)</text>
   </g>
 
-  <!-- Scanner Line -->
-  <line x1="10" y1="40" x2="430" y2="40" class="scanner-beam" />
+  <!-- Divider Line -->
+  <line x1="470" y1="35" x2="470" y2="250" stroke="#1b162b" stroke-width="1" />
+
+  <!-- RIGHT SIDE: Diagnostic Telemetry Logs -->
+  <g transform="translate(500, 55)">
+    <text y="15" class="telemetry-txt">AUDIT_TARGET: SolidityVault.sol</text>
+    <text y="35" class="telemetry-txt" style="fill: #8f9bb3;">[+] Compiler version: Solidity v0.8.20</text>
+    <text y="55" class="telemetry-txt" style="fill: #8f9bb3;">[+] Running static checkers: [Slither / Mythril]</text>
+    <text y="75" class="telemetry-txt" style="fill: #ff0055; font-weight: bold;">[!] VULNERABILITY DETECTED AT LINE 4 // CWE-306</text>
+    <text y="95" class="telemetry-txt" style="fill: #ff0055;">[!] Severity: CRITICAL // SWC-107 Reentrancy</text>
+    <text y="115" class="telemetry-txt" style="fill: #00ff66;">[+] Auto-generating mitigation recommendation...</text>
+    <text y="135" class="telemetry-txt" style="fill: #00ff66;">[+] REMEDY: Apply CEI pattern or ReentrancyGuard.</text>
+    <text y="155" class="telemetry-txt" style="fill: #00ff66;">[+] STATUS: SECURITY PATCH GENERATED // SECURE</text>
+  </g>
+
+  <!-- Scanner Beam -->
+  <line x1="10" y1="40" x2="450" y2="40" class="scanner-beam" />
 
   <!-- Card Header overlay -->
-  <rect width="440" height="30" fill="#04050a" opacity="0.85" />
-  <text x="20" y="20" font-family="'Share Tech Mono', monospace" font-size="11" fill="#bd00ff" font-weight="bold" letter-spacing="1">SMART_CONTRACT_VULN_SCANNER</text>
-  <line x1="0" y1="30" x2="440" y2="30" stroke="#ff0055" stroke-width="1" />
+  <rect width="900" height="30" fill="#04050a" opacity="0.85" />
+  <text x="25" y="20" font-family="'Share Tech Mono', monospace" font-size="12" fill="#bd00ff" font-weight="bold" letter-spacing="2">SMART_CONTRACT_VULN_SCANNER // AUDIT_ENGINE</text>
+  <line x1="0" y1="35" x2="900" y2="35" stroke="#ff0055" stroke-width="1.5" />
 </svg>
