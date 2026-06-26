@@ -110,7 +110,7 @@
   <!-- Terminal Content Lines -->
   <!-- Line 1: Command Prompt & Command Input -->
   <g class="line type-1" transform="translate(20, 60)">
-    <text class="text-base"><tspan class="prompt">rekalnx@sec-core:~$</tspan> <tspan class="command">./exploiter-killer.sh --target solv-protocol</tspan></text>
+    <text class="text-base"><tspan class="prompt">rekalnx@sec-core:~$</tspan> <tspan class="command">./exploiter-killer.sh --target target.xyz</tspan></text>
     <!-- Typing animation mask -->
     <rect x="165" y="-14" width="380" height="20" class="mask-cmd" />
   </g>
