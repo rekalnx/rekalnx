@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="100%" height="100%">
+  <defs>
+    <!-- Fonts and Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Share+Tech+Mono&amp;display=swap');
+      
+      .bg {
+        fill: #06070d;
+      }
+      
+      .grid {
+        stroke: #161b33;
+        stroke-width: 0.5;
+        opacity: 0.5;
+      }
+      
+      .neon-text-main {
+        font-family: 'Orbitron', 'Courier New', monospace;
+        font-weight: 900;
+        fill: #ffffff;
+        font-size: 44px;
+        letter-spacing: 6px;
+        text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+        animation: flicker 5s infinite alternate;
+      }
+      
+      .neon-text-sub {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+        fill: #8f9bb3;
+        font-size: 16px;
+        letter-spacing: 4px;
+        animation: pulse 2.5s infinite ease-in-out;
+      }
+
+      .cyan-glow {
+        stroke: #00f0ff;
+        filter: drop-shadow(0 0 4px #00f0ff);
+      }
+
+      .purple-glow {
+        stroke: #bd00ff;
+        filter: drop-shadow(0 0 4px #bd00ff);
+      }
+      
+      @keyframes flicker {
+        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+          text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff, 0 0 25px #00f0ff, 0 0 40px #00f0ff;
+          opacity: 1;
+        }
+        20%, 24%, 55% {
+          text-shadow: 0 0 2px #00f0ff, 0 0 5px #00f0ff;
+          opacity: 0.85;
+        }
+      }
+      
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 0.7;
+          fill: #8f9bb3;
+          text-shadow: none;
+        }
+        50% {
+          opacity: 1;
+          fill: #bd00ff;
+          text-shadow: 0 0 10px #bd00ff, 0 0 20px #bd00ff;
+        }
+      }
+
+      @keyframes scan {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(300px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .scanner {
+        stroke: rgba(0, 240, 255, 0.4);
+        stroke-width: 2.5;
+        filter: drop-shadow(0 0 6px #00f0ff);
+        animation: scan 6s ease-in-out infinite;
+      }
+
+      .border-line {
+        stroke-dasharray: 2400;
+        stroke-dashoffset: 2400;
+        animation: draw 12s linear infinite;
+      }
+
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      
+      .node {
+        animation: blink 3s infinite ease-in-out;
+      }
+      
+      @keyframes blink {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 1; }
+      }
+    </style>
+
+    <!-- Cyber Gradient -->
+    <linearGradient id="cyberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bd00ff" />
+      <stop offset="50%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#bd00ff" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="300" class="bg" />
+
+  <!-- Grid Layout -->
+  <g>
+    <!-- Vertical Grid Lines -->
+    <line x1="50" y1="0" x2="50" y2="300" class="grid" />
+    <line x1="100" y1="0" x2="100" y2="300" class="grid" />
+    <line x1="150" y1="0" x2="150" y2="300" class="grid" />
+    <line x1="200" y1="0" x2="200" y2="300" class="grid" />
+    <line x1="250" y1="0" x2="250" y2="300" class="grid" />
+    <line x1="300" y1="0" x2="300" y2="300" class="grid" />
+    <line x1="350" y1="0" x2="350" y2="300" class="grid" />
+    <line x1="400" y1="0" x2="400" y2="300" class="grid" />
+    <line x1="450" y1="0" x2="450" y2="300" class="grid" />
+    <line x1="500" y1="0" x2="500" y2="300" class="grid" />
+    <line x1="550" y1="0" x2="550" y2="300" class="grid" />
+    <line x1="600" y1="0" x2="600" y2="300" class="grid" />
+    <line x1="650" y1="0" x2="650" y2="300" class="grid" />
+    <line x1="700" y1="0" x2="700" y2="300" class="grid" />
+    <line x1="750" y1="0" x2="750" y2="300" class="grid" />
+    <line x1="800" y1="0" x2="800" y2="300" class="grid" />
+    <line x1="850" y1="0" x2="850" y2="300" class="grid" />
+
+    <!-- Horizontal Grid Lines -->
+    <line x1="0" y1="50" x2="900" y2="50" class="grid" />
+    <line x1="0" y1="100" x2="900" y2="100" class="grid" />
+    <line x1="0" y1="150" x2="900" y2="150" class="grid" />
+    <line x1="0" y1="200" x2="900" y2="200" class="grid" />
+    <line x1="0" y1="250" x2="900" y2="250" class="grid" />
+  </g>
+
+  <!-- Left Rotating Tech Circle -->
+  <g transform="translate(130, 150)">
+    <circle r="60" fill="none" stroke="#bd00ff" stroke-width="1.5" stroke-dasharray="12, 18" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="25s" repeatCount="indefinite" />
+    </circle>
+    <circle r="75" fill="none" stroke="#00f0ff" stroke-width="1" stroke-dasharray="35, 15, 8, 12" opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="18s" repeatCount="indefinite" />
+    </circle>
+    <circle r="42" fill="none" stroke="#00f0ff" stroke-width="2" stroke-dasharray="140, 50" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite" />
+    </circle>
+    <!-- Cyber Shield -->
+    <polygon points="0,-18 15,-9 15,9 0,22 -15,9 -15,-9" fill="none" stroke="#00f0ff" stroke-width="2" class="cyan-glow" />
+  </g>
+
+  <!-- Right Rotating Tech Circle -->
+  <g transform="translate(770, 150)">
+    <circle r="60" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="12, 18" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="25s" repeatCount="indefinite" />
+    </circle>
+    <circle r="75" fill="none" stroke="#bd00ff" stroke-width="1" stroke-dasharray="35, 15, 8, 12" opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite" />
+    </circle>
+    <!-- Blinking Target Node -->
+    <circle r="9" fill="#bd00ff" class="purple-glow" opacity="0.8">
+      <animate attributeName="r" values="7;11;7" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Neon Glowing Tech Nodes (Cyber Network) -->
+  <g class="node" style="animation-delay: 0.3s;">
+    <circle cx="280" cy="70" r="3" fill="#00f0ff" class="cyan-glow" />
+    <line x1="280" y1="70" x2="310" y2="100" stroke="#161b33" stroke-width="1.5" />
+  </g>
+  <g class="node" style="animation-delay: 1.1s;">
+    <circle cx="620" cy="230" r="3" fill="#bd00ff" class="purple-glow" />
+    <line x1="620" y1="230" x2="590" y2="200" stroke="#161b33" stroke-width="1.5" />
+  </g>
+  <g class="node" style="animation-delay: 0.7s;">
+    <circle cx="340" cy="220" r="3.5" fill="#bd00ff" class="purple-glow" />
+    <line x1="340" y1="220" x2="380" y2="220" stroke="#161b33" stroke-width="1.5" />
+  </g>
+  <g class="node" style="animation-delay: 1.4s;">
+    <circle cx="580" cy="80" r="3" fill="#00f0ff" class="cyan-glow" />
+    <line x1="580" y1="80" x2="540" y2="80" stroke="#161b33" stroke-width="1.5" />
+  </g>
+
+  <!-- Scanning Laser Line -->
+  <line x1="0" y1="0" x2="900" y2="0" class="scanner" />
+
+  <!-- Main Title -->
+  <text x="450" y="145" text-anchor="middle" class="neon-text-main">REIHAN VALENTINO</text>
+
+  <!-- Subtitle -->
+  <text x="450" y="195" text-anchor="middle" class="neon-text-sub">CYBERSECURITY • WEB RECON • SMART CONTRACT AUDITING</text>
+
+  <!-- Terminal Status Code -->
+  <text x="450" y="240" text-anchor="middle" font-family="Share Tech Mono, Courier New, monospace" fill="#1c2340" font-size="12" letter-spacing="1.5">
+    [SYSTEM ACTIVE] -- PORT: 1337 -- SEC_LEVEL: CRITICAL -- DEFENSE: SHIELD_ON
+  </text>
+
+  <!-- Glowing Cyber Border -->
+  <rect x="5" y="5" width="890" height="290" fill="none" stroke="url(#cyberGrad)" stroke-width="2" class="border-line" />
+  
+  <!-- Cyber Corner Brackets -->
+  <!-- Top Left -->
+  <path d="M 2 30 L 2 2 L 30 2" fill="none" stroke="#00f0ff" stroke-width="4.5" />
+  <!-- Top Right -->
+  <path d="M 898 30 L 898 2 L 870 2" fill="none" stroke="#00f0ff" stroke-width="4.5" />
+  <!-- Bottom Left -->
+  <path d="M 2 270 L 2 298 L 30 298" fill="none" stroke="#bd00ff" stroke-width="4.5" />
+  <!-- Bottom Right -->
+  <path d="M 898 270 L 898 298 L 870 298" fill="none" stroke="#bd00ff" stroke-width="4.5" />
+</svg>
