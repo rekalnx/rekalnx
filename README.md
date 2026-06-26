@@ -28,6 +28,14 @@ I am a **Cybersecurity Researcher**, **Bug Bounty Hunter**, and **Smart Contract
 
 ---
 
+### 🖥️ Security Console Diagnostic
+
+<div align="center">
+  <img src="hacker_terminal.svg" alt="Cyber Security Diagnostic Terminal Console" width="100%">
+</div>
+
+---
+
 ### 🏆 Hackathon & Bug Bounty Highlights
 
 #### 🏦 **HackerOne Profile (`reivalentino`)**
