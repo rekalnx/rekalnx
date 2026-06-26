@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" width="100%" height="100%">
   <defs>
-    <!-- CSS styles for simulated terminal typing animations -->
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&amp;display=swap');
       
@@ -48,60 +47,9 @@
         font-weight: bold;
       }
 
-      .cursor {
-        fill: #00f0ff;
-        animation: blink 1s step-end infinite;
-      }
-
       .scanlines {
         fill: url(#scanlinePattern);
         opacity: 0.08;
-      }
-      
-      @keyframes blink {
-        from, to { opacity: 0; }
-        50% { opacity: 1; }
-      }
-
-      /* Line Sequential Appearances */
-      .line {
-        opacity: 0;
-      }
-
-      .type-1 { animation: type 0.4s ease-out 0.5s forwards; }
-      .type-2 { animation: type 0.3s ease-out 2.6s forwards; }
-      .type-3 { animation: type 0.3s ease-out 3.8s forwards; }
-      .type-4 { animation: type-blink 0.3s ease-out 5.2s forwards; }
-      .type-5 { animation: type 0.3s ease-out 7.0s forwards; }
-      .type-6 { animation: type 0.3s ease-out 8.2s forwards; }
-      
-      @keyframes type {
-        to { opacity: 1; }
-      }
-      
-      @keyframes type-blink {
-        0% { opacity: 0; }
-        50% { opacity: 0.5; }
-        100% { opacity: 1; }
-      }
-
-      /* Text Masking to simulate typing character by character */
-      .mask-cmd {
-        stroke: none;
-        fill: #04050a;
-        animation: type-cmd 1.8s steps(32) 0.8s forwards;
-      }
-
-      @keyframes type-cmd {
-        to { transform: translateX(380px); }
-      }
-
-      .alert-border {
-        stroke: #ff0055;
-        stroke-width: 1;
-        fill: none;
-        stroke-dasharray: 4;
-        animation: blink 1s step-end infinite;
       }
     </style>
 
@@ -129,37 +77,51 @@
   <rect width="900" height="250" class="scanlines" rx="8" pointer-events="none" />
 
   <!-- Terminal Content Lines -->
-  <!-- Line 1: Command Prompt & Command Input -->
-  <g class="line type-1" transform="translate(20, 60)">
+  <!-- Line 1: Command Prompt & Command Input (Visible at 0.5s) -->
+  <g transform="translate(20, 60)">
+    <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.5;1" dur="1s" begin="0s" fill="freeze" />
     <text class="text-base"><tspan class="prompt">rekalnx@sec-core:~$</tspan> <tspan class="command">./exploiter-killer.sh --target target.xyz</tspan></text>
-    <!-- Typing animation mask -->
-    <rect x="165" y="-14" width="380" height="20" class="mask-cmd" />
+    <!-- Typing animation mask (Starts uncovering at 0.8s, finished at 2.6s) -->
+    <rect x="165" y="-14" width="0" height="20" fill="#04050a">
+      <animate attributeName="width" values="380;380;0" keyTimes="0;0.3;1" dur="2.6s" begin="0s" fill="freeze" />
+    </rect>
   </g>
   
-  <!-- Line 2: Initializing -->
-  <g class="line type-2" transform="translate(20, 90)">
+  <!-- Line 2: Initializing (Visible at 2.6s) -->
+  <g transform="translate(20, 90)">
+    <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.86;1" dur="3s" begin="0s" fill="freeze" />
     <text class="text-base log-success">[+] Initializing Advanced Vulnerability Mitigation Engine...</text>
   </g>
   
-  <!-- Line 3: Auditing -->
-  <g class="line type-3" transform="translate(20, 120)">
+  <!-- Line 3: Auditing (Visible at 3.8s) -->
+  <g transform="translate(20, 120)">
+    <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.95;1" dur="4s" begin="0s" fill="freeze" />
     <text class="text-base">[i] Target Address: 0x9320d... -- Auditing Solidity Smart Contracts...</text>
   </g>
   
-  <!-- Line 4: Alert Vulnerability Detected -->
-  <g class="line type-4" transform="translate(20, 150)">
-    <rect x="-5" y="-14" width="850" height="20" class="alert-border" />
+  <!-- Line 4: Alert Vulnerability Detected (Visible at 5.2s) -->
+  <g transform="translate(20, 150)">
+    <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.94;1" dur="5.5s" begin="0s" fill="freeze" />
+    <!-- Blinking alert border -->
+    <rect x="-5" y="-14" width="850" height="20" fill="none" stroke="#ff0055" stroke-width="1" stroke-dasharray="4">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+    </rect>
     <text class="text-base log-danger">[!] ALERT: Critical Vulnerability Found! CWE-306 (Missing Authentication in core transfer)</text>
   </g>
   
-  <!-- Line 5: Mitigation -->
-  <g class="line type-5" transform="translate(20, 180)">
+  <!-- Line 5: Mitigation (Visible at 7.0s) -->
+  <g transform="translate(20, 180)">
+    <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.97;1" dur="7.2s" begin="0s" fill="freeze" />
     <text class="text-base log-success">[+] Executing Countermeasures... Exploit neutralized. Security Shield: ONLINE.</text>
   </g>
   
-  <!-- Line 6: Next prompt -->
-  <g class="line type-6" transform="translate(20, 210)">
+  <!-- Line 6: Next prompt (Visible at 8.2s) -->
+  <g transform="translate(20, 210)">
+    <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.96;1" dur="8.5s" begin="0s" fill="freeze" />
     <text class="text-base"><tspan class="prompt">rekalnx@sec-core:~$</tspan></text>
-    <rect x="165" y="-12" width="8" height="15" class="cursor" />
+    <!-- Blinking cursor -->
+    <rect x="165" y="-12" width="8" height="15" fill="#00f0ff">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+    </rect>
   </g>
 </svg>

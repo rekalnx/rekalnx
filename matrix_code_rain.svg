@@ -12,25 +12,22 @@
       
       .code-stream {
         font-family: 'Share Tech Mono', monospace;
-        letter-spacing: 1.5px;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
+        letter-spacing: 1px;
       }
 
       /* Depth Layers */
       .bg-layer {
         font-size: 8.5px;
         opacity: 0.25;
-        filter: blur(0.5px);
       }
 
       .mid-layer {
-        font-size: 11.5px;
+        font-size: 11px;
         opacity: 0.65;
       }
 
       .fg-layer {
-        font-size: 14px;
+        font-size: 13.5px;
         opacity: 0.95;
         font-weight: bold;
       }
@@ -51,65 +48,745 @@
         text-shadow: 0 0 6px #ffffff, 0 0 12px #00f0ff !important;
         font-weight: bold;
       }
-      
-      /* Rain animations */
-      .rain-col {
-        animation: fall 8s linear infinite;
-      }
-      
-      @keyframes fall {
-        0% { transform: translateY(-260px); }
-        100% { transform: translateY(260px); }
-      }
-      
-      /* Speeds based on depth */
-      .speed-slow { animation-duration: 11s; }
-      .speed-mid { animation-duration: 7.5s; }
-      .speed-fast { animation-duration: 4.8s; }
-
-      .delay-1 { animation-delay: 0.5s; }
-      .delay-2 { animation-delay: 2.2s; }
-      .delay-3 { animation-delay: 1.1s; }
-      .delay-4 { animation-delay: 3.5s; }
-      .delay-5 { animation-delay: 0s; }
-      .delay-6 { animation-delay: 4.8s; }
-      .delay-7 { animation-delay: 1.8s; }
-      .delay-8 { animation-delay: 5.5s; }
-      .delay-9 { animation-delay: 3.0s; }
-      .delay-10 { animation-delay: 0.8s; }
     </style>
   </defs>
 
   <!-- Box Container -->
   <rect width="900" height="250" rx="6" class="bg" />
-
   <!-- BACKGROUND LAYER (Slow, small, blurred) -->
-  <g class="rain-col speed-slow delay-3" transform="translate(70, 10)"><text class="code-stream bg-layer purple-code">importosSysSocket</text></g>
-  <g class="rain-col speed-slow delay-8" transform="translate(190, 10)"><text class="code-stream bg-layer cyan-code">msg.sender.call</text></g>
-  <g class="rain-col speed-slow delay-2" transform="translate(310, 10)"><text class="code-stream bg-layer purple-code">assertBalanceOwner</text></g>
-  <g class="rain-col speed-slow delay-6" transform="translate(430, 10)"><text class="code-stream bg-layer cyan-code">solidityDeFiSmart</text></g>
-  <g class="rain-col speed-slow delay-9" transform="translate(550, 10)"><text class="code-stream bg-layer purple-code">attackerBlockedTarget</text></g>
-  <g class="rain-col speed-slow delay-4" transform="translate(670, 10)"><text class="code-stream bg-layer cyan-code">functionSafeTransfer</text></g>
-  <g class="rain-col speed-slow delay-7" transform="translate(790, 10)"><text class="code-stream bg-layer purple-code">bugBountyHunterHacker</text></g>
+  <g transform="translate(70, 40)">
+    <animateTransform attributeName="transform" type="translate" values="70,-204.0; 70,250" dur="11s" repeatCount="indefinite" begin="0s" />
+    <text x="0" y="0" class="code-stream bg-layer purple-code">
+      <tspan x="0" dy="0" class="head-char">i</tspan>
+      <tspan x="0" dy="12.0">m</tspan>
+      <tspan x="0" dy="12.0">p</tspan>
+      <tspan x="0" dy="12.0">o</tspan>
+      <tspan x="0" dy="12.0">r</tspan>
+      <tspan x="0" dy="12.0">t</tspan>
+      <tspan x="0" dy="12.0">o</tspan>
+      <tspan x="0" dy="12.0">s</tspan>
+      <tspan x="0" dy="12.0">S</tspan>
+      <tspan x="0" dy="12.0">y</tspan>
+      <tspan x="0" dy="12.0">s</tspan>
+      <tspan x="0" dy="12.0">S</tspan>
+      <tspan x="0" dy="12.0">o</tspan>
+      <tspan x="0" dy="12.0">c</tspan>
+      <tspan x="0" dy="12.0">k</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">t</tspan>
+    </text>
+  </g>
+  <g transform="translate(190, 40)">
+    <animateTransform attributeName="transform" type="translate" values="190,-180.0; 190,250" dur="10s" repeatCount="indefinite" begin="1s" />
+    <text x="0" y="0" class="code-stream bg-layer cyan-code">
+      <tspan x="0" dy="0" class="head-char">m</tspan>
+      <tspan x="0" dy="12.0">s</tspan>
+      <tspan x="0" dy="12.0">g</tspan>
+      <tspan x="0" dy="12.0">.</tspan>
+      <tspan x="0" dy="12.0">s</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">n</tspan>
+      <tspan x="0" dy="12.0">d</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">r</tspan>
+      <tspan x="0" dy="12.0">.</tspan>
+      <tspan x="0" dy="12.0">c</tspan>
+      <tspan x="0" dy="12.0">a</tspan>
+      <tspan x="0" dy="12.0">l</tspan>
+      <tspan x="0" dy="12.0">l</tspan>
+    </text>
+  </g>
+  <g transform="translate(310, 40)">
+    <animateTransform attributeName="transform" type="translate" values="310,-216.0; 310,250" dur="12s" repeatCount="indefinite" begin="2s" />
+    <text x="0" y="0" class="code-stream bg-layer purple-code">
+      <tspan x="0" dy="0" class="head-char">a</tspan>
+      <tspan x="0" dy="12.0">s</tspan>
+      <tspan x="0" dy="12.0">s</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">r</tspan>
+      <tspan x="0" dy="12.0">t</tspan>
+      <tspan x="0" dy="12.0">B</tspan>
+      <tspan x="0" dy="12.0">a</tspan>
+      <tspan x="0" dy="12.0">l</tspan>
+      <tspan x="0" dy="12.0">a</tspan>
+      <tspan x="0" dy="12.0">n</tspan>
+      <tspan x="0" dy="12.0">c</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">O</tspan>
+      <tspan x="0" dy="12.0">w</tspan>
+      <tspan x="0" dy="12.0">n</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">r</tspan>
+    </text>
+  </g>
+  <g transform="translate(430, 40)">
+    <animateTransform attributeName="transform" type="translate" values="430,-204.0; 430,250" dur="9s" repeatCount="indefinite" begin="0.5s" />
+    <text x="0" y="0" class="code-stream bg-layer cyan-code">
+      <tspan x="0" dy="0" class="head-char">s</tspan>
+      <tspan x="0" dy="12.0">o</tspan>
+      <tspan x="0" dy="12.0">l</tspan>
+      <tspan x="0" dy="12.0">i</tspan>
+      <tspan x="0" dy="12.0">d</tspan>
+      <tspan x="0" dy="12.0">i</tspan>
+      <tspan x="0" dy="12.0">t</tspan>
+      <tspan x="0" dy="12.0">y</tspan>
+      <tspan x="0" dy="12.0">D</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">F</tspan>
+      <tspan x="0" dy="12.0">i</tspan>
+      <tspan x="0" dy="12.0">S</tspan>
+      <tspan x="0" dy="12.0">m</tspan>
+      <tspan x="0" dy="12.0">a</tspan>
+      <tspan x="0" dy="12.0">r</tspan>
+      <tspan x="0" dy="12.0">t</tspan>
+    </text>
+  </g>
+  <g transform="translate(550, 40)">
+    <animateTransform attributeName="transform" type="translate" values="550,-252.0; 550,250" dur="11s" repeatCount="indefinite" begin="3s" />
+    <text x="0" y="0" class="code-stream bg-layer purple-code">
+      <tspan x="0" dy="0" class="head-char">a</tspan>
+      <tspan x="0" dy="12.0">t</tspan>
+      <tspan x="0" dy="12.0">t</tspan>
+      <tspan x="0" dy="12.0">a</tspan>
+      <tspan x="0" dy="12.0">c</tspan>
+      <tspan x="0" dy="12.0">k</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">r</tspan>
+      <tspan x="0" dy="12.0">B</tspan>
+      <tspan x="0" dy="12.0">l</tspan>
+      <tspan x="0" dy="12.0">o</tspan>
+      <tspan x="0" dy="12.0">c</tspan>
+      <tspan x="0" dy="12.0">k</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">d</tspan>
+      <tspan x="0" dy="12.0">T</tspan>
+      <tspan x="0" dy="12.0">a</tspan>
+      <tspan x="0" dy="12.0">r</tspan>
+      <tspan x="0" dy="12.0">g</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">t</tspan>
+    </text>
+  </g>
+  <g transform="translate(670, 40)">
+    <animateTransform attributeName="transform" type="translate" values="670,-240.0; 670,250" dur="10s" repeatCount="indefinite" begin="1.5s" />
+    <text x="0" y="0" class="code-stream bg-layer cyan-code">
+      <tspan x="0" dy="0" class="head-char">f</tspan>
+      <tspan x="0" dy="12.0">u</tspan>
+      <tspan x="0" dy="12.0">n</tspan>
+      <tspan x="0" dy="12.0">c</tspan>
+      <tspan x="0" dy="12.0">t</tspan>
+      <tspan x="0" dy="12.0">i</tspan>
+      <tspan x="0" dy="12.0">o</tspan>
+      <tspan x="0" dy="12.0">n</tspan>
+      <tspan x="0" dy="12.0">S</tspan>
+      <tspan x="0" dy="12.0">a</tspan>
+      <tspan x="0" dy="12.0">f</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">T</tspan>
+      <tspan x="0" dy="12.0">r</tspan>
+      <tspan x="0" dy="12.0">a</tspan>
+      <tspan x="0" dy="12.0">n</tspan>
+      <tspan x="0" dy="12.0">s</tspan>
+      <tspan x="0" dy="12.0">f</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">r</tspan>
+    </text>
+  </g>
+  <g transform="translate(790, 40)">
+    <animateTransform attributeName="transform" type="translate" values="790,-252.0; 790,250" dur="12s" repeatCount="indefinite" begin="2.5s" />
+    <text x="0" y="0" class="code-stream bg-layer purple-code">
+      <tspan x="0" dy="0" class="head-char">b</tspan>
+      <tspan x="0" dy="12.0">u</tspan>
+      <tspan x="0" dy="12.0">g</tspan>
+      <tspan x="0" dy="12.0">B</tspan>
+      <tspan x="0" dy="12.0">o</tspan>
+      <tspan x="0" dy="12.0">u</tspan>
+      <tspan x="0" dy="12.0">n</tspan>
+      <tspan x="0" dy="12.0">t</tspan>
+      <tspan x="0" dy="12.0">y</tspan>
+      <tspan x="0" dy="12.0">H</tspan>
+      <tspan x="0" dy="12.0">u</tspan>
+      <tspan x="0" dy="12.0">n</tspan>
+      <tspan x="0" dy="12.0">t</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">r</tspan>
+      <tspan x="0" dy="12.0">H</tspan>
+      <tspan x="0" dy="12.0">a</tspan>
+      <tspan x="0" dy="12.0">c</tspan>
+      <tspan x="0" dy="12.0">k</tspan>
+      <tspan x="0" dy="12.0">e</tspan>
+      <tspan x="0" dy="12.0">r</tspan>
+    </text>
+  </g>
 
   <!-- MIDGROUND LAYER (Standard) -->
-  <g class="rain-col speed-mid delay-5" transform="translate(30, 10)"><text class="code-stream mid-layer cyan-code"><tspan class="head-char">C</tspan>ontractSolidityAuditRequireMsgSenderBalanceOwner0x</text></g>
-  <g class="rain-col speed-mid delay-1" transform="translate(150, 10)"><text class="code-stream mid-layer purple-code"><tspan class="head-char">R</tspan>eentrancyAttackExploitTransferPayloadSendCallGas</text></g>
-  <g class="rain-col speed-mid delay-6" transform="translate(270, 10)"><text class="code-stream mid-layer cyan-code"><tspan class="head-char">D</tspan>efCheckVulnerabilityPayloadAuditResponseHeader</text></g>
-  <g class="rain-col speed-mid delay-4" transform="translate(390, 10)"><text class="code-stream mid-layer purple-code"><tspan class="head-char">M</tspan>odifyOnlyOwnerSelfdestructKillContractSecureAudit</text></g>
-  <g class="rain-col speed-mid delay-8" transform="translate(510, 10)"><text class="code-stream mid-layer cyan-code"><tspan class="head-char">0</tspan>x3e002827240996cd07fd2c14d9b6044e87eb0be169aeb</text></g>
-  <g class="rain-col speed-mid delay-10" transform="translate(630, 10)"><text class="code-stream mid-layer purple-code"><tspan class="head-char">N</tspan>ASA_LoR_ApprovedVDPRecipientHackerOneRankExpert</text></g>
-  <g class="rain-col speed-mid delay-3" transform="translate(750, 10)"><text class="code-stream mid-layer cyan-code"><tspan class="head-char">E</tspan>xploitMitigatedDefenseSecureCyberShieldActive1337</text></g>
-  <g class="rain-col speed-mid delay-7" transform="translate(870, 10)"><text class="code-stream mid-layer purple-code"><tspan class="head-char">S</tspan>olvProtocolAuditedSmartContractsSecurityLocked</text></g>
+  <g transform="translate(30, 40)">
+    <animateTransform attributeName="transform" type="translate" values="30,-765.0; 30,250" dur="7.5s" repeatCount="indefinite" begin="0s" />
+    <text x="0" y="0" class="code-stream mid-layer cyan-code">
+      <tspan x="0" dy="0" class="head-char">C</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">S</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">y</tspan>
+      <tspan x="0" dy="15.0">A</tspan>
+      <tspan x="0" dy="15.0">u</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">R</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">q</tspan>
+      <tspan x="0" dy="15.0">u</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">M</tspan>
+      <tspan x="0" dy="15.0">s</tspan>
+      <tspan x="0" dy="15.0">g</tspan>
+      <tspan x="0" dy="15.0">S</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">B</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">O</tspan>
+      <tspan x="0" dy="15.0">w</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">0</tspan>
+      <tspan x="0" dy="15.0">x</tspan>
+    </text>
+  </g>
+  <g transform="translate(150, 40)">
+    <animateTransform attributeName="transform" type="translate" values="150,-735.0; 150,250" dur="8s" repeatCount="indefinite" begin="1.5s" />
+    <text x="0" y="0" class="code-stream mid-layer purple-code">
+      <tspan x="0" dy="0" class="head-char">R</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">y</tspan>
+      <tspan x="0" dy="15.0">A</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">k</tspan>
+      <tspan x="0" dy="15.0">E</tspan>
+      <tspan x="0" dy="15.0">x</tspan>
+      <tspan x="0" dy="15.0">p</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">T</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">s</tspan>
+      <tspan x="0" dy="15.0">f</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">P</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">y</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">S</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">C</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">G</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">s</tspan>
+    </text>
+  </g>
+  <g transform="translate(270, 40)">
+    <animateTransform attributeName="transform" type="translate" values="270,-705.0; 270,250" dur="7.2s" repeatCount="indefinite" begin="0.8s" />
+    <text x="0" y="0" class="code-stream mid-layer cyan-code">
+      <tspan x="0" dy="0" class="head-char">D</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">f</tspan>
+      <tspan x="0" dy="15.0">C</tspan>
+      <tspan x="0" dy="15.0">h</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">k</tspan>
+      <tspan x="0" dy="15.0">V</tspan>
+      <tspan x="0" dy="15.0">u</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">b</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">y</tspan>
+      <tspan x="0" dy="15.0">P</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">y</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">A</tspan>
+      <tspan x="0" dy="15.0">u</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">R</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">s</tspan>
+      <tspan x="0" dy="15.0">p</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">s</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">H</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+    </text>
+  </g>
+  <g transform="translate(390, 40)">
+    <animateTransform attributeName="transform" type="translate" values="390,-750.0; 390,250" dur="8.5s" repeatCount="indefinite" begin="2.2s" />
+    <text x="0" y="0" class="code-stream mid-layer purple-code">
+      <tspan x="0" dy="0" class="head-char">M</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">f</tspan>
+      <tspan x="0" dy="15.0">y</tspan>
+      <tspan x="0" dy="15.0">O</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">y</tspan>
+      <tspan x="0" dy="15.0">O</tspan>
+      <tspan x="0" dy="15.0">w</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">S</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">f</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">s</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">u</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">K</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">C</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">S</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">u</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">A</tspan>
+      <tspan x="0" dy="15.0">u</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+    </text>
+  </g>
+  <g transform="translate(510, 40)">
+    <animateTransform attributeName="transform" type="translate" values="510,-705.0; 510,250" dur="7s" repeatCount="indefinite" begin="0.2s" />
+    <text x="0" y="0" class="code-stream mid-layer cyan-code">
+      <tspan x="0" dy="0" class="head-char">0</tspan>
+      <tspan x="0" dy="15.0">x</tspan>
+      <tspan x="0" dy="15.0">3</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">0</tspan>
+      <tspan x="0" dy="15.0">0</tspan>
+      <tspan x="0" dy="15.0">2</tspan>
+      <tspan x="0" dy="15.0">8</tspan>
+      <tspan x="0" dy="15.0">2</tspan>
+      <tspan x="0" dy="15.0">7</tspan>
+      <tspan x="0" dy="15.0">2</tspan>
+      <tspan x="0" dy="15.0">4</tspan>
+      <tspan x="0" dy="15.0">0</tspan>
+      <tspan x="0" dy="15.0">9</tspan>
+      <tspan x="0" dy="15.0">9</tspan>
+      <tspan x="0" dy="15.0">6</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">0</tspan>
+      <tspan x="0" dy="15.0">7</tspan>
+      <tspan x="0" dy="15.0">f</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">2</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">1</tspan>
+      <tspan x="0" dy="15.0">4</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">9</tspan>
+      <tspan x="0" dy="15.0">b</tspan>
+      <tspan x="0" dy="15.0">6</tspan>
+      <tspan x="0" dy="15.0">0</tspan>
+      <tspan x="0" dy="15.0">4</tspan>
+      <tspan x="0" dy="15.0">4</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">8</tspan>
+      <tspan x="0" dy="15.0">7</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">b</tspan>
+      <tspan x="0" dy="15.0">0</tspan>
+      <tspan x="0" dy="15.0">b</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">1</tspan>
+      <tspan x="0" dy="15.0">6</tspan>
+      <tspan x="0" dy="15.0">9</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">b</tspan>
+    </text>
+  </g>
+  <g transform="translate(630, 40)">
+    <animateTransform attributeName="transform" type="translate" values="630,-720.0; 630,250" dur="9s" repeatCount="indefinite" begin="1.1s" />
+    <text x="0" y="0" class="code-stream mid-layer purple-code">
+      <tspan x="0" dy="0" class="head-char">N</tspan>
+      <tspan x="0" dy="15.0">A</tspan>
+      <tspan x="0" dy="15.0">S</tspan>
+      <tspan x="0" dy="15.0">A</tspan>
+      <tspan x="0" dy="15.0">_</tspan>
+      <tspan x="0" dy="15.0">L</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">R</tspan>
+      <tspan x="0" dy="15.0">_</tspan>
+      <tspan x="0" dy="15.0">A</tspan>
+      <tspan x="0" dy="15.0">p</tspan>
+      <tspan x="0" dy="15.0">p</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">v</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">V</tspan>
+      <tspan x="0" dy="15.0">D</tspan>
+      <tspan x="0" dy="15.0">P</tspan>
+      <tspan x="0" dy="15.0">R</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">p</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">H</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">k</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">O</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">R</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">k</tspan>
+      <tspan x="0" dy="15.0">E</tspan>
+      <tspan x="0" dy="15.0">x</tspan>
+      <tspan x="0" dy="15.0">p</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+    </text>
+  </g>
+  <g transform="translate(750, 40)">
+    <animateTransform attributeName="transform" type="translate" values="750,-750.0; 750,250" dur="7.8s" repeatCount="indefinite" begin="0.5s" />
+    <text x="0" y="0" class="code-stream mid-layer cyan-code">
+      <tspan x="0" dy="0" class="head-char">E</tspan>
+      <tspan x="0" dy="15.0">x</tspan>
+      <tspan x="0" dy="15.0">p</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">M</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">g</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">D</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">f</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">s</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">S</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">u</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">C</tspan>
+      <tspan x="0" dy="15.0">y</tspan>
+      <tspan x="0" dy="15.0">b</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">S</tspan>
+      <tspan x="0" dy="15.0">h</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">A</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">v</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">1</tspan>
+      <tspan x="0" dy="15.0">3</tspan>
+      <tspan x="0" dy="15.0">3</tspan>
+      <tspan x="0" dy="15.0">7</tspan>
+    </text>
+  </g>
+  <g transform="translate(870, 40)">
+    <animateTransform attributeName="transform" type="translate" values="870,-705.0; 870,250" dur="8.2s" repeatCount="indefinite" begin="1.9s" />
+    <text x="0" y="0" class="code-stream mid-layer purple-code">
+      <tspan x="0" dy="0" class="head-char">S</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">v</tspan>
+      <tspan x="0" dy="15.0">P</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">l</tspan>
+      <tspan x="0" dy="15.0">A</tspan>
+      <tspan x="0" dy="15.0">u</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+      <tspan x="0" dy="15.0">S</tspan>
+      <tspan x="0" dy="15.0">m</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">C</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">n</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">a</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">s</tspan>
+      <tspan x="0" dy="15.0">S</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">u</tspan>
+      <tspan x="0" dy="15.0">r</tspan>
+      <tspan x="0" dy="15.0">i</tspan>
+      <tspan x="0" dy="15.0">t</tspan>
+      <tspan x="0" dy="15.0">y</tspan>
+      <tspan x="0" dy="15.0">L</tspan>
+      <tspan x="0" dy="15.0">o</tspan>
+      <tspan x="0" dy="15.0">c</tspan>
+      <tspan x="0" dy="15.0">k</tspan>
+      <tspan x="0" dy="15.0">e</tspan>
+      <tspan x="0" dy="15.0">d</tspan>
+    </text>
+  </g>
 
   <!-- FOREGROUND LAYER (Fast, large, glowing) -->
-  <g class="rain-col speed-fast delay-2" transform="translate(110, 10)"><text class="code-stream fg-layer cyan-code"><tspan class="head-char">X</tspan>SS_BYPASS_AUTH</text></g>
-  <g class="rain-col speed-fast delay-7" transform="translate(230, 10)"><text class="code-stream fg-layer purple-code"><tspan class="head-char">P</tspan>ORT_SCAN_RECON</text></g>
-  <g class="rain-col speed-fast delay-9" transform="translate(350, 10)"><text class="code-stream fg-layer cyan-code"><tspan class="head-char">S</tspan>OLIDITY_EXPERT</text></g>
-  <g class="rain-col speed-fast delay-1" transform="translate(470, 10)"><text class="code-stream fg-layer purple-code"><tspan class="head-char">K</tspan>ILL_EXPLOITER</text></g>
-  <g class="rain-col speed-fast delay-4" transform="translate(590, 10)"><text class="code-stream fg-layer cyan-code"><tspan class="head-char">N</tspan>UCLEI_SCAN_ON</text></g>
-  <g class="rain-col speed-fast delay-10" transform="translate(710, 10)"><text class="code-stream fg-layer purple-code"><tspan class="head-char">B</tspan>ILT_SECURE_OK</text></g>
-  <g class="rain-col speed-fast delay-6" transform="translate(830, 10)"><text class="code-stream fg-layer cyan-code"><tspan class="head-char">0</tspan>xDEADBEEF_KEY</text></g>
+  <g transform="translate(110, 40)">
+    <animateTransform attributeName="transform" type="translate" values="110,-270.0; 110,250" dur="4.8s" repeatCount="indefinite" begin="0.2s" />
+    <text x="0" y="0" class="code-stream fg-layer cyan-code">
+      <tspan x="0" dy="0" class="head-char">X</tspan>
+      <tspan x="0" dy="18.0">S</tspan>
+      <tspan x="0" dy="18.0">S</tspan>
+      <tspan x="0" dy="18.0">_</tspan>
+      <tspan x="0" dy="18.0">B</tspan>
+      <tspan x="0" dy="18.0">Y</tspan>
+      <tspan x="0" dy="18.0">P</tspan>
+      <tspan x="0" dy="18.0">A</tspan>
+      <tspan x="0" dy="18.0">S</tspan>
+      <tspan x="0" dy="18.0">S</tspan>
+      <tspan x="0" dy="18.0">_</tspan>
+      <tspan x="0" dy="18.0">A</tspan>
+      <tspan x="0" dy="18.0">U</tspan>
+      <tspan x="0" dy="18.0">T</tspan>
+      <tspan x="0" dy="18.0">H</tspan>
+    </text>
+  </g>
+  <g transform="translate(230, 40)">
+    <animateTransform attributeName="transform" type="translate" values="230,-270.0; 230,250" dur="5.2s" repeatCount="indefinite" begin="1.2s" />
+    <text x="0" y="0" class="code-stream fg-layer purple-code">
+      <tspan x="0" dy="0" class="head-char">P</tspan>
+      <tspan x="0" dy="18.0">O</tspan>
+      <tspan x="0" dy="18.0">R</tspan>
+      <tspan x="0" dy="18.0">T</tspan>
+      <tspan x="0" dy="18.0">_</tspan>
+      <tspan x="0" dy="18.0">S</tspan>
+      <tspan x="0" dy="18.0">C</tspan>
+      <tspan x="0" dy="18.0">A</tspan>
+      <tspan x="0" dy="18.0">N</tspan>
+      <tspan x="0" dy="18.0">_</tspan>
+      <tspan x="0" dy="18.0">R</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">C</tspan>
+      <tspan x="0" dy="18.0">O</tspan>
+      <tspan x="0" dy="18.0">N</tspan>
+    </text>
+  </g>
+  <g transform="translate(350, 40)">
+    <animateTransform attributeName="transform" type="translate" values="350,-270.0; 350,250" dur="4.5s" repeatCount="indefinite" begin="0.5s" />
+    <text x="0" y="0" class="code-stream fg-layer cyan-code">
+      <tspan x="0" dy="0" class="head-char">S</tspan>
+      <tspan x="0" dy="18.0">O</tspan>
+      <tspan x="0" dy="18.0">L</tspan>
+      <tspan x="0" dy="18.0">I</tspan>
+      <tspan x="0" dy="18.0">D</tspan>
+      <tspan x="0" dy="18.0">I</tspan>
+      <tspan x="0" dy="18.0">T</tspan>
+      <tspan x="0" dy="18.0">Y</tspan>
+      <tspan x="0" dy="18.0">_</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">X</tspan>
+      <tspan x="0" dy="18.0">P</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">R</tspan>
+      <tspan x="0" dy="18.0">T</tspan>
+    </text>
+  </g>
+  <g transform="translate(470, 40)">
+    <animateTransform attributeName="transform" type="translate" values="470,-252.0; 470,250" dur="5s" repeatCount="indefinite" begin="1s" />
+    <text x="0" y="0" class="code-stream fg-layer purple-code">
+      <tspan x="0" dy="0" class="head-char">K</tspan>
+      <tspan x="0" dy="18.0">I</tspan>
+      <tspan x="0" dy="18.0">L</tspan>
+      <tspan x="0" dy="18.0">L</tspan>
+      <tspan x="0" dy="18.0">_</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">X</tspan>
+      <tspan x="0" dy="18.0">P</tspan>
+      <tspan x="0" dy="18.0">L</tspan>
+      <tspan x="0" dy="18.0">O</tspan>
+      <tspan x="0" dy="18.0">I</tspan>
+      <tspan x="0" dy="18.0">T</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">R</tspan>
+    </text>
+  </g>
+  <g transform="translate(590, 40)">
+    <animateTransform attributeName="transform" type="translate" values="590,-252.0; 590,250" dur="4.7s" repeatCount="indefinite" begin="0s" />
+    <text x="0" y="0" class="code-stream fg-layer cyan-code">
+      <tspan x="0" dy="0" class="head-char">N</tspan>
+      <tspan x="0" dy="18.0">U</tspan>
+      <tspan x="0" dy="18.0">C</tspan>
+      <tspan x="0" dy="18.0">L</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">I</tspan>
+      <tspan x="0" dy="18.0">_</tspan>
+      <tspan x="0" dy="18.0">S</tspan>
+      <tspan x="0" dy="18.0">C</tspan>
+      <tspan x="0" dy="18.0">A</tspan>
+      <tspan x="0" dy="18.0">N</tspan>
+      <tspan x="0" dy="18.0">_</tspan>
+      <tspan x="0" dy="18.0">O</tspan>
+      <tspan x="0" dy="18.0">N</tspan>
+    </text>
+  </g>
+  <g transform="translate(710, 40)">
+    <animateTransform attributeName="transform" type="translate" values="710,-252.0; 710,250" dur="5.5s" repeatCount="indefinite" begin="1.4s" />
+    <text x="0" y="0" class="code-stream fg-layer purple-code">
+      <tspan x="0" dy="0" class="head-char">B</tspan>
+      <tspan x="0" dy="18.0">I</tspan>
+      <tspan x="0" dy="18.0">L</tspan>
+      <tspan x="0" dy="18.0">T</tspan>
+      <tspan x="0" dy="18.0">_</tspan>
+      <tspan x="0" dy="18.0">S</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">C</tspan>
+      <tspan x="0" dy="18.0">U</tspan>
+      <tspan x="0" dy="18.0">R</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">_</tspan>
+      <tspan x="0" dy="18.0">O</tspan>
+      <tspan x="0" dy="18.0">K</tspan>
+    </text>
+  </g>
+  <g transform="translate(830, 40)">
+    <animateTransform attributeName="transform" type="translate" values="830,-252.0; 830,250" dur="4.9s" repeatCount="indefinite" begin="0.7s" />
+    <text x="0" y="0" class="code-stream fg-layer cyan-code">
+      <tspan x="0" dy="0" class="head-char">0</tspan>
+      <tspan x="0" dy="18.0">x</tspan>
+      <tspan x="0" dy="18.0">D</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">A</tspan>
+      <tspan x="0" dy="18.0">D</tspan>
+      <tspan x="0" dy="18.0">B</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">F</tspan>
+      <tspan x="0" dy="18.0">_</tspan>
+      <tspan x="0" dy="18.0">K</tspan>
+      <tspan x="0" dy="18.0">E</tspan>
+      <tspan x="0" dy="18.0">Y</tspan>
+    </text>
+  </g>
 
   <!-- Card Header overlay -->
   <rect width="900" height="30" fill="#04050a" opacity="0.85" />

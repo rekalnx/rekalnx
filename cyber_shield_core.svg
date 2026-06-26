@@ -109,15 +109,15 @@
   <g class="hologram-group">
     <!-- Concentric Hologram Rings -->
     <circle cx="450" cy="140" r="100" fill="none" stroke="#bd00ff" stroke-width="1" stroke-dasharray="10, 30" opacity="0.6">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="rotate" from="0 450 140" to="360 450 140" dur="20s" repeatCount="indefinite" />
     </circle>
     
     <circle cx="450" cy="140" r="85" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="40, 20, 10, 20" class="glow-cyan">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="rotate" from="360 450 140" to="0 450 140" dur="12s" repeatCount="indefinite" />
     </circle>
     
     <circle cx="450" cy="140" r="60" fill="none" stroke="#ff0055" stroke-width="2" stroke-dasharray="80, 40" class="glow-red">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="rotate" from="0 450 140" to="360 450 140" dur="8s" repeatCount="indefinite" />
     </circle>
 
     <!-- Center 3D Security Key Core -->

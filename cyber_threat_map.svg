@@ -17,32 +17,9 @@
         opacity: 0.35;
       }
       
-      .cyber-dot {
-        fill: #00f0ff;
-        animation: pulse-dot 2s infinite ease-in-out;
-      }
-
-      .threat-dot {
-        fill: #ff0055;
-        animation: pulse-dot 1.5s infinite ease-in-out;
-      }
-
-      @keyframes pulse-dot {
-        0%, 100% { transform: scale(1); opacity: 0.4; }
-        50% { transform: scale(1.6); opacity: 1; filter: drop-shadow(0 0 5px currentColor); }
-      }
-      
       .laser-arc {
         fill: none;
-        stroke-dasharray: 250;
-        stroke-dashoffset: 250;
-        animation: arc-draw 4s infinite linear;
-      }
-
-      @keyframes arc-draw {
-        0% { stroke-dashoffset: 250; stroke: #ff0055; stroke-width: 1.5; }
-        50% { stroke-dashoffset: 0; stroke: #bd00ff; stroke-width: 1.5; }
-        100% { stroke-dashoffset: -250; stroke: #00f0ff; stroke-width: 1.5; opacity: 0; }
+        stroke-width: 1.5;
       }
 
       .log-box {
@@ -50,26 +27,6 @@
         font-size: 11px;
         fill: #ff0055;
         font-weight: bold;
-        animation: blink-log 1.5s infinite steps(2);
-      }
-
-      @keyframes blink-log {
-        0%, 100% { opacity: 0.3; }
-        50% { opacity: 1; }
-      }
-
-      /* Rippling Rings on Emitter Target */
-      .ripple {
-        fill: none;
-        stroke-width: 1.5;
-        transform-origin: 640px 180px;
-        animation: ripple-out 3s infinite cubic-bezier(0.1, 0.8, 0.3, 1);
-      }
-
-      @keyframes ripple-out {
-        0% { r: 5px; opacity: 1; stroke: #ff0055; }
-        50% { stroke: #bd00ff; }
-        100% { r: 40px; opacity: 0; stroke: #00f0ff; }
       }
     </style>
   </defs>
@@ -83,46 +40,77 @@
            M 500,0 L 500,250 M 600,0 L 600,250 M 700,0 L 700,250 M 800,0 L 800,250" class="map-grid" />
 
   <!-- Simplified Abstract World Map Nodes -->
-  <!-- US -->
-  <circle cx="150" cy="90" r="4" class="threat-dot" style="transform-origin: 150px 90px;" />
+  <circle cx="150" cy="90" r="4" fill="#ff0055">
+    <animate attributeName="r" values="4;6.4;4" dur="1.5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite" />
+  </circle>
   <text x="150" y="80" font-family="Share Tech Mono" font-size="8" fill="#8f9bb3" text-anchor="middle">NODE_US_01</text>
 
-  <!-- Europe -->
-  <circle cx="420" cy="80" r="4" class="threat-dot" style="transform-origin: 420px 80px;" />
+  <circle cx="420" cy="80" r="4" fill="#ff0055">
+    <animate attributeName="r" values="4;6.4;4" dur="1.5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite" />
+  </circle>
   <text x="420" y="70" font-family="Share Tech Mono" font-size="8" fill="#8f9bb3" text-anchor="middle">NODE_EU_02</text>
 
-  <!-- Asia (China/Russia) -->
-  <circle cx="680" cy="80" r="4" class="threat-dot" style="transform-origin: 680px 80px;" />
+  <circle cx="680" cy="80" r="4" fill="#ff0055">
+    <animate attributeName="r" values="4;6.4;4" dur="1.5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite" />
+  </circle>
   <text x="680" y="70" font-family="Share Tech Mono" font-size="8" fill="#8f9bb3" text-anchor="middle">NODE_ASIA_03</text>
 
   <!-- Indonesia / Target Core (Bogor) -->
-  <circle cx="640" cy="180" r="6" class="cyber-dot" style="transform-origin: 640px 180px;" />
+  <circle cx="640" cy="180" r="6" fill="#00f0ff">
+    <animate attributeName="r" values="6;9.6;6" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+  </circle>
   <text x="640" y="200" font-family="Share Tech Mono" font-size="9" fill="#00f0ff" text-anchor="middle" font-weight="bold">DEF_CENTER_ID</text>
 
-  <!-- Rippling Impact Rings at ID -->
-  <circle cx="640" cy="180" r="10" class="ripple" />
-  <circle cx="640" cy="180" r="10" class="ripple" style="animation-delay: 1s;" />
-  <circle cx="640" cy="180" r="10" class="ripple" style="animation-delay: 2s;" />
+  <!-- Rippling Impact Rings at ID (Native SVG Animation) -->
+  <circle cx="640" cy="180" r="6" fill="none" stroke="#ff0055" stroke-width="1.5">
+    <animate attributeName="r" values="6;40" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1;0" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="stroke" values="#ff0055;#bd00ff;#00f0ff" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="640" cy="180" r="6" fill="none" stroke="#ff0055" stroke-width="1.5">
+    <animate attributeName="r" values="6;40" dur="3s" begin="1s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1;0" dur="3s" begin="1s" repeatCount="indefinite" />
+    <animate attributeName="stroke" values="#ff0055;#bd00ff;#00f0ff" dur="3s" begin="1s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="640" cy="180" r="6" fill="none" stroke="#ff0055" stroke-width="1.5">
+    <animate attributeName="r" values="6;40" dur="3s" begin="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1;0" dur="3s" begin="2s" repeatCount="indefinite" />
+    <animate attributeName="stroke" values="#ff0055;#bd00ff;#00f0ff" dur="3s" begin="2s" repeatCount="indefinite" />
+  </circle>
 
   <!-- Attack Laser Arcs -->
-  <!-- US to ID -->
-  <path d="M 150,90 Q 395,110 640,180" class="laser-arc" />
-  
-  <!-- EU to ID -->
-  <path d="M 420,80 Q 530,100 640,180" class="laser-arc" style="animation-delay: 1.5s;" />
-
-  <!-- ASIA to ID -->
-  <path d="M 680,80 Q 660,130 640,180" class="laser-arc" style="animation-delay: 2.8s;" />
+  <path d="M 150,90 Q 395,110 640,180" class="laser-arc" stroke="#ff0055" stroke-dasharray="250" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" values="250;0;-250" dur="4s" repeatCount="indefinite" begin="0s" />
+    <animate attributeName="stroke" values="#ff0055;#bd00ff;#00f0ff" dur="4s" repeatCount="indefinite" begin="0s" />
+  </path>
+  <path d="M 420,80 Q 530,100 640,180" class="laser-arc" stroke="#ff0055" stroke-dasharray="250" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" values="250;0;-250" dur="4s" repeatCount="indefinite" begin="1.5s" />
+    <animate attributeName="stroke" values="#ff0055;#bd00ff;#00f0ff" dur="4s" repeatCount="indefinite" begin="1.5s" />
+  </path>
+  <path d="M 680,80 Q 660,130 640,180" class="laser-arc" stroke="#ff0055" stroke-dasharray="250" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" values="250;0;-250" dur="4s" repeatCount="indefinite" begin="2.8s" />
+    <animate attributeName="stroke" values="#ff0055;#bd00ff;#00f0ff" dur="4s" repeatCount="indefinite" begin="2.8s" />
+  </path>
 
   <!-- Status / Log Overlays -->
   <g transform="translate(100, 215)">
     <rect width="320" height="22" rx="3" fill="#04050a" stroke="#ff0055" stroke-width="1" />
-    <text x="15" y="15" class="log-box">🔴 ALERT: GLOBAL INTRUSION MITIGATED // DEFENSE STATUS: ACTIVE</text>
+    <text x="15" y="15" class="log-box">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite" />
+      🔴 ALERT: GLOBAL INTRUSION MITIGATED // DEFENSE STATUS: ACTIVE
+    </text>
   </g>
 
   <g transform="translate(480, 215)">
     <rect width="320" height="22" rx="3" fill="#04050a" stroke="#00f0ff" stroke-width="1" />
-    <text x="15" y="15" class="log-box" style="fill: #00f0ff; animation-duration: 2.5s;">🟢 SECURE: CORE_SYSTEMS LOCKED // PROTECTION: 100% OK</text>
+    <text x="15" y="15" class="log-box" style="fill: #00f0ff;">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
+      🟢 SECURE: CORE_SYSTEMS LOCKED // PROTECTION: 100% OK
+    </text>
   </g>
 
   <!-- Card Header overlay -->

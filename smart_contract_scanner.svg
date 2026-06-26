@@ -37,13 +37,6 @@
         stroke: rgba(189, 0, 255, 0.5);
         stroke-width: 2.5;
         filter: drop-shadow(0 0 5px #bd00ff);
-        animation: audit-scan 5s linear infinite;
-      }
-
-      @keyframes audit-scan {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(180px); }
-        100% { transform: translateY(0); }
       }
 
       .vulnerability-alert {
@@ -51,12 +44,6 @@
         stroke-width: 1;
         fill: none;
         stroke-dasharray: 4;
-        animation: blink-border 1.5s infinite steps(2);
-      }
-
-      @keyframes blink-border {
-        0%, 100% { opacity: 0; }
-        50% { opacity: 1; }
       }
 
       .alert-tag {
@@ -64,12 +51,6 @@
         font-size: 11px;
         fill: #ff0055;
         font-weight: bold;
-        animation: blink-text 1.5s infinite alternate;
-      }
-
-      @keyframes blink-text {
-        0%, 100% { opacity: 0.3; }
-        50% { opacity: 1; text-shadow: 0 0 4px #ff0055; }
       }
       
       .telemetry-txt {
@@ -118,10 +99,15 @@
     <text y="135" class="code-line">}</text>
 
     <!-- Vulnerability indicator box -->
-    <rect x="-5" y="62" width="375" height="18" class="vulnerability-alert" />
+    <rect x="-5" y="62" width="375" height="18" class="vulnerability-alert">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite" />
+    </rect>
     <!-- Alert Arrow and Label -->
     <path d="M 375,71 L 395,71" stroke="#ff0055" stroke-width="1.5" marker-end="url(#arrow)" />
-    <text x="20" y="165" class="alert-tag">⚠️ CRITICAL: REENTRANCY VULNERABILITY FOUND (CWE-306)</text>
+    <text x="20" y="165" class="alert-tag">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" />
+      ⚠️ CRITICAL: REENTRANCY VULNERABILITY FOUND (CWE-306)
+    </text>
   </g>
 
   <!-- Divider Line -->
@@ -145,7 +131,10 @@
   </g>
 
   <!-- Scanner Beam -->
-  <line x1="10" y1="40" x2="450" y2="40" class="scanner-beam" />
+  <line x1="10" y1="40" x2="450" y2="40" class="scanner-beam">
+    <animate attributeName="y1" values="40;220;40" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="y2" values="40;220;40" dur="5s" repeatCount="indefinite" />
+  </line>
 
   <!-- Card Header overlay -->
   <rect width="900" height="30" fill="#04050a" opacity="0.85" />

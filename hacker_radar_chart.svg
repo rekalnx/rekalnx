@@ -37,8 +37,8 @@
       }
 
       @keyframes pulse-skill {
-        0%, 100% { fill: rgba(0, 240, 255, 0.2); stroke: #00f0ff; }
-        50% { fill: rgba(189, 0, 255, 0.3); stroke: #bd00ff; filter: drop-shadow(0 0 8px #bd00ff); }
+        0%, 100% { fill: rgba(0, 240, 255, 0.25); stroke: #00f0ff; }
+        50% { fill: rgba(189, 0, 255, 0.35); stroke: #bd00ff; filter: drop-shadow(0 0 8px #bd00ff); }
       }
 
       .skill-node {
@@ -67,21 +67,10 @@
         fill: #8f9bb3;
       }
 
-      /* Animated Level Status Loading Bars */
       .level-bar-bg {
         fill: #12182c;
         stroke: #1b2340;
         stroke-width: 1;
-      }
-
-      .level-bar-fill {
-        fill: #00f0ff;
-        filter: drop-shadow(0 0 3px #00f0ff);
-        animation: loading-bar 2.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
-      }
-
-      @keyframes loading-bar {
-        0% { width: 0; }
       }
     </style>
   </defs>
@@ -96,21 +85,24 @@
     <!-- Bar 1: Smart Contracts -->
     <text x="0" y="38" class="info-text">Smart Contract Security</text>
     <rect x="0" y="44" width="180" height="5" rx="2.5" class="level-bar-bg" />
-    <rect x="0" y="44" width="171" height="5" rx="2.5" class="level-bar-fill" /> <!-- 95% -->
+    <rect x="0" y="44" width="171" height="5" rx="2.5" fill="#00f0ff" filter="drop-shadow(0 0 3px #00f0ff)">
+      <animate attributeName="width" from="0" to="171" dur="2s" fill="freeze" />
+    </rect> <!-- 95% -->
 
     <!-- Bar 2: API Security -->
     <text x="0" y="70" class="info-text">API Pen-testing</text>
     <rect x="0" y="76" width="180" height="5" rx="2.5" class="level-bar-bg" />
-    <rect x="0" y="76" width="153" height="5" rx="2.5" class="level-bar-fill" style="fill: #bd00ff; filter: drop-shadow(0 0 3px #bd00ff); animation-delay: 0.3s;" /> <!-- 85% -->
+    <rect x="0" y="76" width="153" height="5" rx="2.5" fill="#bd00ff" filter="drop-shadow(0 0 3px #bd00ff)">
+      <animate attributeName="width" from="0" to="153" dur="2s" begin="0.3s" fill="freeze" />
+    </rect> <!-- 85% -->
     
     <text x="0" y="105" class="info-text">Smart Contract Audits: 33+ completed</text>
     <text x="0" y="122" class="info-text">Key focus: Reentrancy, Access Control</text>
   </g>
 
   <!-- CENTER: Radar Grid & Rotating HUD Rings (Centered at 450, 140) -->
-  <!-- Rotating Outer Telemetry Ring -->
   <circle cx="450" cy="140" r="100" fill="none" stroke="#bd00ff" stroke-width="0.75" stroke-dasharray="4, 12" opacity="0.5">
-    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="25s" repeatCount="indefinite" />
+    <animateTransform attributeName="transform" type="rotate" from="0 450 140" to="360 450 140" dur="25s" repeatCount="indefinite" />
   </circle>
 
   <!-- Level 4 (Outer) -->
@@ -153,12 +145,16 @@
     <!-- Bar 3: Web Pentesting -->
     <text x="0" y="38" class="info-text">Web App Pen-testing</text>
     <rect x="0" y="44" width="180" height="5" rx="2.5" class="level-bar-bg" />
-    <rect x="0" y="44" width="162" height="5" rx="2.5" class="level-bar-fill" style="animation-delay: 0.2s;" /> <!-- 90% -->
+    <rect x="0" y="44" width="162" height="5" rx="2.5" fill="#00f0ff" filter="drop-shadow(0 0 3px #00f0ff)">
+      <animate attributeName="width" from="0" to="162" dur="2s" begin="0.2s" fill="freeze" />
+    </rect> <!-- 90% -->
 
     <!-- Bar 4: Recon Automation -->
     <text x="0" y="70" class="info-text">Recon Automation</text>
     <rect x="0" y="76" width="180" height="5" rx="2.5" class="level-bar-bg" />
-    <rect x="0" y="76" width="165" height="5" rx="2.5" class="level-bar-fill" style="fill: #bd00ff; filter: drop-shadow(0 0 3px #bd00ff); animation-delay: 0.5s;" /> <!-- 92% -->
+    <rect x="0" y="76" width="165" height="5" rx="2.5" fill="#bd00ff" filter="drop-shadow(0 0 3px #bd00ff)">
+      <animate attributeName="width" from="0" to="165" dur="2s" begin="0.5s" fill="freeze" />
+    </rect> <!-- 92% -->
     
     <text x="0" y="105" class="info-text">Resolved H1 Reports: 13+</text>
     <text x="0" y="122" class="info-text">Custom recon tooling: Active</text>
