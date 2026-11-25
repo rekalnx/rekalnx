@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="t d">
+  <title id="t">Reihan Valentino Yudistira</title>
+  <desc id="d">Security engineer and bug hunter from Indonesia</desc>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; letter-spacing: 2.6px; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  </style>
+  <rect width="1200" height="300" fill="#F5F6F8"/>
+  <rect x="16.5" y="16.5" width="1167" height="267" fill="none" stroke="#0B0D12" stroke-opacity="0.14"/>
+  <path d="M16.5 40 V16.5 H40" fill="none" stroke="#E5341B" stroke-width="1.5"/>
+  <path d="M1183.5 260 V283.5 H1160" fill="none" stroke="#E5341B" stroke-width="1.5"/>
+  <path d="M16.5 150 H28 M1171.5 150 H1183.5" stroke="#0B0D12" stroke-opacity="0.4"/>
+
+  <text x="64" y="72" class="mono" font-size="13" fill="#5B6473"><tspan fill="#E5341B">REKALNX</tspan>  //  SECURITY RESEARCH</text>
+
+  <g transform="translate(1136 67)">
+    <circle r="3.5" fill="#E5341B">
+      <animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <text x="1122" y="72" class="mono" font-size="13" fill="#0B0D12" text-anchor="end">AVAILABLE</text>
+
+  <text x="60" y="164" class="sans" font-size="66" font-weight="600" letter-spacing="-2" fill="#0B0D12">Reihan Valentino Yudistira<tspan fill="#E5341B">.</tspan></text>
+
+  <text x="64" y="208" class="mono" font-size="14" fill="#5B6473">CYBER SECURITY  ·  BUG BOUNTY  ·  NETWORK &amp; SYSTEMS  ·  AI TOOLING</text>
+
+  <g stroke="#0B0D12" stroke-opacity="0.22">
+    <path d="M64 246 H1136"/>
+    <path d="M64 240 V252 M332 243 V249 M600 243 V249 M868 243 V249 M1136 240 V252"/>
+  </g>
+  <text x="64" y="270" class="mono" font-size="11" fill="#6B7383">INDONESIA · UTC+7</text>
+  <text x="1136" y="270" class="mono" font-size="11" fill="#6B7383" text-anchor="end">GITHUB.COM/REKALNX</text>
+</svg>

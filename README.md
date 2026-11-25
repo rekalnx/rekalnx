@@ -1,119 +1,47 @@
-# Hi there, I'm Reihan Valentino Yudistira 👋 (aka @rekalnx)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
+  <img alt="Reihan Valentino Yudistira — security engineer and bug hunter" src="assets/header-dark.svg" width="100%">
+</picture>
 
-<div align="center">
-  <img src="cybersecurity_banner_v2.svg" alt="Reihan Valentino Yudistira Banner" width="100%">
-</div>
+I'm a security engineer and bug hunter from Indonesia. I test web apps, APIs and smart contracts and report what I find through coordinated disclosure. I also build small, zero-dependency tools for Linux systems and AI agents.
 
-<br>
+**Open to:** security engineering, network / sysadmin roles, and bug bounty or pentest engagements.
 
-<div align="center">
-  <a href="https://hackerone.com/reivalentino" target="_blank"><img src="https://img.shields.io/badge/HackerOne-reivalentino-red?style=for-the-badge&logo=hackerone&logoColor=white" alt="HackerOne"></a>
-  <a href="https://hackenproof.com/valentinoreihan" target="_blank"><img src="https://img.shields.io/badge/HackenProof-valentinoreihan-green?style=for-the-badge&logo=security&logoColor=white" alt="HackenProof"></a>
-  <a href="https://bugcrowd.com/reivalentino" target="_blank"><img src="https://img.shields.io/badge/Bugcrowd-reivalentino-orange?style=for-the-badge&logo=bugcrowd&logoColor=white" alt="Bugcrowd"></a>
-  <a href="https://linkedin.com/in/reihan-valentino-yudistira" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Reihan%20Valentino%20Yudistira-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://instagram.com/reivalentino" target="_blank"><img src="https://img.shields.io/badge/Instagram-@reivalentino-purple?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
-</div>
+&nbsp;
 
----
+### Security record
 
-### 🛡️ About Me
+| Platform | Highlights |
+| :-- | :-- |
+| [HackerOne](https://hackerone.com/reivalentino?type=user) | Reputation **305** · Signal **4.82** · Impact **28.33** (top 92nd percentile) |
+| [HackenProof](https://hackenproof.com/hackers/valentinoreihan) | Global rank **#1430** · Reputation **179+** · 33+ programs, incl. the Solv smart-contract audit |
+| [TTIS Kukar · CSIRT](https://ttis.kukarkab.go.id/whitehat-etam) | Hall of Fame — XSS on a `kukarkab.go.id` subdomain, reported via the official CSIRT channel (Dec 2025) |
+| [Bugcrowd](https://bugcrowd.com/reivalentino) | Active researcher |
 
-<div align="center">
-  <img src="cyber_bio_glitch.svg" alt="Reihan Valentino Yudistira Bio" width="100%">
-</div>
+&nbsp;
 
----
+### Selected work
 
-### 🔮 Isometric 3D Holoshield Projection
+| Project | What it does | Built with |
+| :-- | :-- | :-- |
+| [**nanobox**](https://github.com/rekalnx/nanobox) | Isolates Linux processes and filesystems with kernel namespaces in ~60 lines of shell. No Docker, no daemons. | POSIX sh |
+| [**open-clinic-triage**](https://github.com/rekalnx/open-clinic-triage) | Offline emergency triage (START / JumpSTART, WHO Essential Medicines) that needs no internet. | Python · HTML/JS |
+| [**ast-compress**](https://github.com/rekalnx/ast-compress) | Strips function bodies but keeps signatures and contracts, cutting LLM context by 84.1% on its own source. | Python |
+| [**pure-agents**](https://github.com/rekalnx/pure-agents) | Implements 10 agent architectures (ReAct, Plan-and-Solve, Reflection, HTN…) using only the standard library. | Python |
+| [**rewind**](https://github.com/rekalnx/rewind) | Lets you snapshot and restore any folder through SHA-256 content addressing, without git. | Python |
+| [**agents-from-scratch**](https://github.com/rekalnx/agents-from-scratch) | Teaches the agent loop, tools, memory, RAG and multi-agent systems one chapter at a time. | Python |
 
-<div align="center">
-  <img src="cyber_shield_core.svg" alt="Isometric 3D Holoshield Core" width="100%">
-</div>
+&nbsp;
 
----
+### Toolkit
 
-### 🖥️ Security Console Diagnostic & Threat Monitoring
+**Offense** — web & API testing, recon automation, Burp Suite, Solidity review<br>
+**Systems** — Linux, kernel namespaces, Bash, Docker, networking, telecom & electronics fundamentals<br>
+**Build** — Python, JavaScript / TypeScript, AI agents & LLM tooling
 
-<div align="center">
-  <img src="hacker_terminal.svg" alt="Cyber Security Diagnostic Terminal Console" width="100%">
-</div>
+&nbsp;
 
-<br>
+### Contact
 
-<div align="center">
-  <img src="matrix_code_rain.svg" alt="Live Code Streams" width="100%">
-</div>
-
-<br>
-
-<div align="center">
-  <img src="cyber_threat_map.svg" alt="Threat Map" width="100%">
-</div>
-
----
-
-### 🔍 Security Auditing Core & Telemetry
-
-<div align="center">
-  <img src="smart_contract_scanner.svg" alt="Smart Contract Scanner" width="100%">
-</div>
-
-<br>
-
-<div align="center">
-  <img src="telemetry_crosshair.svg" alt="Telemetry Crosshair" width="100%">
-</div>
-
----
-
-### 🏆 Hackathon & Bug Bounty Highlights
-
-#### 🏦 **HackerOne Profile (`reivalentino`)**
-- **Reputation**: `305`
-- **Signal**: `4.82` (45th Percentile)
-- **Impact**: `28.33` (Top **92nd Percentile** globally!)
-
-#### 🐛 **HackenProof Profile (`valentinoreihan`)**
-- **Rank**: `#1430` globally
-- **Reputation**: `179+`
-- **Contributions**: Active in 33+ security programs, including the Solv Smart Contracts audit.
-
----
-
-### 🚀 Technical Skills
-
-<div align="center">
-  <img src="animated_skills.svg" alt="Cyber Skills" width="100%">
-</div>
-
----
-
-### 📊 Capabilities Map & GitHub Stats
-
-<div align="center">
-  <img src="hacker_radar_chart.svg" alt="Capabilities Map" width="100%">
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=rekalnx&show_icons=true&theme=tokyonight&count_private=true" alt="rekalnx GitHub Stats" width="100%">
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rekalnx&layout=compact&theme=tokyonight" alt="rekalnx Top Languages" width="100%">
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rekalnx&theme=tokyonight" alt="rekalnx GitHub Streak" width="100%">
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://ghchart.rshah.org/00f0ff/rekalnx" alt="rekalnx's Github Contributions" width="100%">
-</div>
+[LinkedIn](https://www.linkedin.com/in/reihan-valentino-y) · [HackerOne](https://hackerone.com/reivalentino?type=user) · [HackenProof](https://hackenproof.com/hackers/valentinoreihan) · [Bugcrowd](https://bugcrowd.com/reivalentino) · [Instagram](https://www.instagram.com/reivalentino)
