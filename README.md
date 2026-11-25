@@ -4,7 +4,7 @@
   <img alt="Reihan Valentino Yudistira — security engineer and bug hunter" src="assets/header-dark.svg" width="100%">
 </picture>
 
-I'm a security engineer and bug hunter from Indonesia. I test web apps, APIs and smart contracts and report what I find through coordinated disclosure. I also build small, zero-dependency tools for Linux systems and AI agents.
+I'm a security engineer and bug hunter from Bogor, Indonesia. I test web apps, APIs and smart contracts and report what I find through coordinated disclosure. That work has earned a Letter of Recognition from NASA and 18 valid findings on HackerOne. I also build small, zero-dependency tools for Linux systems and AI agents, and I compete in robotics.
 
 **Open to:** security engineering, network / sysadmin roles, and bug bounty or pentest engagements.
 
@@ -14,9 +14,10 @@ I'm a security engineer and bug hunter from Indonesia. I test web apps, APIs and
 
 | Platform | Highlights |
 | :-- | :-- |
-| [HackerOne](https://hackerone.com/reivalentino?type=user) | Reputation **305** · Signal **4.82** · Impact **28.33** (top 92nd percentile) |
-| [HackenProof](https://hackenproof.com/hackers/valentinoreihan) | Global rank **#1430** · Reputation **179+** · 33+ programs, incl. the Solv smart-contract audit |
-| [TTIS Kukar · CSIRT](https://ttis.kukarkab.go.id/whitehat-etam) | Hall of Fame — XSS on a `kukarkab.go.id` subdomain, reported via the official CSIRT channel (Dec 2025) |
+| [HackerOne](https://hackerone.com/reivalentino?type=user) | **18** valid vulnerabilities · **12** thanks · Reputation **754** · Impact **23.64** (93rd percentile) · ID-verified |
+| [NASA VDP](https://bugcrowd.com/nasa-vdp) | **Letter of Recognition**, received for a valid vulnerability reported through NASA's official Bugcrowd channel |
+| [HackenProof](https://hackenproof.com/hackers/valentinoreihan) | Global rank **#1091** · Reputation **216** · 35 programs (NAVI Protocol, Cetus, Kaia…) · KYC-verified |
+| [TTIS Kukar · CSIRT](https://ttis.kukarkab.go.id/whitehat-etam) | Hall of Fame entry for an XSS on a `kukarkab.go.id` subdomain, reported via the official CSIRT channel on 07 Dec 2025 |
 | [Bugcrowd](https://bugcrowd.com/reivalentino) | Active researcher |
 
 &nbsp;
@@ -36,8 +37,9 @@ I'm a security engineer and bug hunter from Indonesia. I test web apps, APIs and
 
 ### Toolkit
 
-**Offense** — web & API testing, recon automation, Burp Suite, Solidity review<br>
-**Systems** — Linux, kernel namespaces, Bash, Docker, networking, telecom & electronics fundamentals<br>
+**Offense** — web & API testing (BOLA, OAuth, injection), recon automation, Burp Suite, Solidity auditing<br>
+**Systems** — Linux, kernel namespaces, Bash, Docker, networking, telecom fundamentals<br>
+**Hardware** — electronics, robotics & IoT (OTN 2024 robotics competitor)<br>
 **Build** — Python, JavaScript / TypeScript, AI agents & LLM tooling
 
 &nbsp;
