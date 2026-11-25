@@ -28,6 +28,9 @@
     <path d="M64 246 H1136"/>
     <path d="M64 240 V252 M332 243 V249 M600 243 V249 M868 243 V249 M1136 240 V252"/>
   </g>
+  <rect x="64" y="244.5" width="28" height="3" fill="#E5341B">
+    <animate attributeName="x" values="64;1108;64" keyTimes="0;0.5;1" dur="14s" calcMode="spline" keySplines="0.65 0 0.35 1;0.65 0 0.35 1" repeatCount="indefinite"/>
+  </rect>
   <text x="64" y="270" class="mono" font-size="11" fill="#6B7383">BOGOR, INDONESIA · UTC+7</text>
   <text x="1136" y="270" class="mono" font-size="11" fill="#6B7383" text-anchor="end">GITHUB.COM/REKALNX</text>
 </svg>

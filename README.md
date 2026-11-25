@@ -8,9 +8,24 @@ I'm a security engineer and bug hunter from Bogor, Indonesia. I test web apps, A
 
 **Open to:** security engineering, network / sysadmin roles, and bug bounty or pentest engagements.
 
+<p>
+  <a href="https://hackerone.com/reivalentino?type=user"><img alt="HackerOne" src="https://img.shields.io/badge/HackerOne-reivalentino-11141B?style=flat-square&labelColor=050608&logo=hackerone&logoColor=E8ECF2"></a>
+  <a href="https://hackenproof.com/hackers/valentinoreihan"><img alt="HackenProof" src="https://img.shields.io/badge/HackenProof-valentinoreihan-11141B?style=flat-square&labelColor=050608"></a>
+  <a href="https://bugcrowd.com/reivalentino"><img alt="Bugcrowd" src="https://img.shields.io/badge/Bugcrowd-reivalentino-11141B?style=flat-square&labelColor=050608&logo=bugcrowd&logoColor=E8ECF2"></a>
+  <a href="https://www.linkedin.com/in/reihan-valentino-y"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-reihan--valentino--y-11141B?style=flat-square&labelColor=050608"></a>
+  <a href="https://www.instagram.com/reivalentino"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-@reivalentino-11141B?style=flat-square&labelColor=050608&logo=instagram&logoColor=E8ECF2"></a>
+  <img alt="Status: open to work" src="https://img.shields.io/badge/status-open_to_work-FF3B1F?style=flat-square&labelColor=050608">
+</p>
+
 &nbsp;
 
 ### Security record
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
+  <img alt="HackerOne reputation 754 · 18 valid vulnerabilities · NASA VDP Letter of Recognition · HackenProof global rank #1091" src="assets/stats-dark.svg" width="100%">
+</picture>
 
 | Platform | Highlights |
 | :-- | :-- |
@@ -19,6 +34,14 @@ I'm a security engineer and bug hunter from Bogor, Indonesia. I test web apps, A
 | [HackenProof](https://hackenproof.com/hackers/valentinoreihan) | Global rank **#1091** · Reputation **216** · 35 programs (NAVI Protocol, Cetus, Kaia…) · KYC-verified |
 | [TTIS Kukar · CSIRT](https://ttis.kukarkab.go.id/whitehat-etam) | Hall of Fame entry for an XSS on a `kukarkab.go.id` subdomain, reported via the official CSIRT channel on 07 Dec 2025 |
 | [Bugcrowd](https://bugcrowd.com/reivalentino) | Active researcher |
+
+&nbsp;
+
+### Now
+
+- **Hunting** on HackerOne and HackenProof, mostly API authorization (BOLA, OAuth token flows) and sensitive-data exposure.
+- **Building** zero-dependency tools in pure Python and POSIX shell for Linux isolation and AI agents.
+- **Tinkering** with electronics, robotics and IoT, the hardware side I competed with at OTN 2024.
 
 &nbsp;
 
@@ -44,6 +67,20 @@ I'm a security engineer and bug hunter from Bogor, Indonesia. I test web apps, A
 
 &nbsp;
 
+### Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rekalnx/rekalnx/output/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/rekalnx/rekalnx/output/snake-light.svg">
+  <img alt="Contribution graph being traversed by a snake animation" src="https://raw.githubusercontent.com/rekalnx/rekalnx/output/snake-dark.svg" width="100%">
+</picture>
+
+<sub>Regenerated daily by a GitHub Action from my contribution calendar.</sub>
+
+&nbsp;
+
 ### Contact
 
 [LinkedIn](https://www.linkedin.com/in/reihan-valentino-y) · [HackerOne](https://hackerone.com/reivalentino?type=user) · [HackenProof](https://hackenproof.com/hackers/valentinoreihan) · [Bugcrowd](https://bugcrowd.com/reivalentino) · [Instagram](https://www.instagram.com/reivalentino)
+
+<sub>Security findings are reported only through each organisation's official disclosure channel.</sub>
